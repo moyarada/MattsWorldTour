@@ -6,22 +6,30 @@
 //  Copyright 2011 CCDC. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 typedef enum
 {
 	AchievemenTypeCountries = 0,
 	AchievemenTypeCategories,
 	AchievemenTypeTime
-} AchivementType;
+}
+AchivementType;
+
+#import <Foundation/Foundation.h>
+
+#import "Task.h"
 
 @interface Achievement : NSObject
 {
-	
+	BOOL completed;
 }
 
 @property (assign) AchivementType type;
-@property (retain) NSArray *requirements;
+@property (retain) NSMutableArray *requirements;
 @property (readonly, getter=isCompleted) BOOL complete;
+
+- (id)initWithType:(AchivementType)nType requirements:(NSArray *)nRequirements;
+
+- (void)addRequirementWithTask:(Task *)task;
+- (void)validateForCompletedTasks:(NSArray *)completedTasks;
 
 @end
