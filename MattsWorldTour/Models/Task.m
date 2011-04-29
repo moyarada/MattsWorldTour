@@ -8,14 +8,16 @@
 
 #import "Task.h"
 
-
 @implementation Task
-@synthesize country=country_, category=category_;
+
+@synthesize completed, country=country_, category=category_;
 
 - (BOOL)meetsRequirementTask:(Task*)task
 {
     BOOL equal = NO;
-    if (self.country == task.country && self.category == task.category) {
+    if (self.country == task.country && self.category == task.category)
+	{
+		
     }
     
     return equal;

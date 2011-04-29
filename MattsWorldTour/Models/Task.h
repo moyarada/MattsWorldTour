@@ -10,12 +10,17 @@
 
 @class Country;
 @class Category;
-@interface Task : NSObject {
+
+@interface Task : NSObject
+{
     Country *country_;
     Category *category_;
 }
-@property (nonatomic, retain) Country *country;
-@property (nonatomic, retain) Category *category;
+
+@property (assign) BOOL completed;
+@property (retain) Country *country;
+@property (retain) Category *category;
 
 - (BOOL)meetsRequirementTask:(Task*)task;
+
 @end
