@@ -8,14 +8,70 @@
 
 #import "Achievement.h"
 
+#import "Task.h"
+
 @implementation Achievement
 
 @synthesize type;
 @synthesize requirements;
 
-- (BOOL)isCompleted
+- (id)initWithType:(AchivementType)nType requirements:(NSArray *)nRequirements
 {
-	return YES;
+	self = [super init];
+	if (self)
+	{
+		completed = NO;
+		self.type = nType;
+		self.requirements = [NSMutableArray arrayWithArray:nRequirements];
+	}
+	return self;
+}
+
+- (void)addRequirementWithTask:(Task *)task
+{
+	[self.requirements addObject:task];
+	completed = NO;
+}
+
+- (void)removeTaskFromRequirements:(Task *)task
+{
+	[self.requirements removeObject:task];
+	completed = NO;
+}
+
+- (void)validateForCompletedTasks:(NSArray *)completedTasks
+{
+	if (!completed)
+	{
+		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger reqIndex, BOOL *reqStop) {
+			if (!reqTask.done)
+			{
+				[completedTasks enumerateObjectsUsingBlock:^(Task *comTask, NSUInteger comIndex, BOOL *comStop) {
+					if ([comTask meetsRequirementTask:reqTask] && comTask.done == YES)
+					{
+						reqTask.done = YES;
+						comStop = YES;
+					}
+				}]
+			}
+		}];
+		
+		BOOL tempCompleted = YES;
+		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger index, BOOL *stop) {
+			if (!reqTask.done)
+			{
+				tempCompleted = NO;
+				stop = YES;
+			}
+		}];
+		
+		completed = tempCompleted;
+	}
+}
+
+- (BOOL)isCompleted
+{	
+	return completed;
 }
 
 @end
