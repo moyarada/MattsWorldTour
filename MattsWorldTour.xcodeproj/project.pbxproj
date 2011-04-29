@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
+		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
+		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
+		5A1D363E136B75F900AB0277 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363D136B75F900AB0277 /* Country.m */; };
 		5A695CA9136B5D03008089AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CA8136B5D03008089AD /* UIKit.framework */; };
 		5A695CAB136B5D03008089AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CAA136B5D03008089AD /* Foundation.framework */; };
 		5A695CAD136B5D03008089AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CAC136B5D03008089AD /* CoreGraphics.framework */; };
@@ -19,6 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
+		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
+		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
+		5A1D3637136B74DB00AB0277 /* GameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameManager.m; path = Models/GameManager.m; sourceTree = "<group>"; };
+		5A1D3639136B75EA00AB0277 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = Models/Category.h; sourceTree = "<group>"; };
+		5A1D363A136B75EA00AB0277 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = Models/Category.m; sourceTree = "<group>"; };
+		5A1D363C136B75F900AB0277 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Country.h; path = Models/Country.h; sourceTree = "<group>"; };
+		5A1D363D136B75F900AB0277 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = Models/Country.m; sourceTree = "<group>"; };
 		5A695CA4136B5D03008089AD /* MattsWorldTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattsWorldTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A695CA8136B5D03008089AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A695CAA136B5D03008089AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1D362F136B71C300AB0277 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A1D3633136B724800AB0277 /* Achievement.h */,
+				5A1D3634136B724800AB0277 /* Achievement.m */,
+				5A1D3636136B74DB00AB0277 /* GameManager.h */,
+				5A1D3637136B74DB00AB0277 /* GameManager.m */,
+				5A1D3639136B75EA00AB0277 /* Category.h */,
+				5A1D363A136B75EA00AB0277 /* Category.m */,
+				5A1D363C136B75F900AB0277 /* Country.h */,
+				5A1D363D136B75F900AB0277 /* Country.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5A1D3631136B71C700AB0277 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A695CBD136B5D03008089AD /* MattsWorldTourViewController.h */,
+				5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A1D3632136B71CB00AB0277 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A695CBA136B5D03008089AD /* MainWindow.xib */,
+				5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		5A695C99136B5D03008089AD = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +124,11 @@
 		5A695CAE136B5D03008089AD /* MattsWorldTour */ = {
 			isa = PBXGroup;
 			children = (
+				5A1D3632136B71CB00AB0277 /* Views */,
+				5A1D3631136B71C700AB0277 /* Controllers */,
+				5A1D362F136B71C300AB0277 /* Models */,
 				5A695CB7136B5D03008089AD /* MattsWorldTourAppDelegate.h */,
 				5A695CB8136B5D03008089AD /* MattsWorldTourAppDelegate.m */,
-				5A695CBA136B5D03008089AD /* MainWindow.xib */,
-				5A695CBD136B5D03008089AD /* MattsWorldTourViewController.h */,
-				5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */,
-				5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */,
 				5A695CAF136B5D03008089AD /* Supporting Files */,
 			);
 			path = MattsWorldTour;
@@ -167,6 +211,10 @@
 				5A695CB6136B5D03008089AD /* main.m in Sources */,
 				5A695CB9136B5D03008089AD /* MattsWorldTourAppDelegate.m in Sources */,
 				5A695CBF136B5D03008089AD /* MattsWorldTourViewController.m in Sources */,
+				5A1D3635136B724800AB0277 /* Achievement.m in Sources */,
+				5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */,
+				5A1D363B136B75EA00AB0277 /* Category.m in Sources */,
+				5A1D363E136B75F900AB0277 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +329,7 @@
 				5A695CC7136B5D03008089AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

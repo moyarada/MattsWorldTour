@@ -3,7 +3,7 @@
 //  MattsWorldTour
 //
 //  Created by Morten Gregersen on 4/29/11.
-//  Copyright 2011 MoGee. All rights reserved.
+//  Copyright 2011 CCDC. All rights reserved.
 //
 
 #import "MattsWorldTourViewController.h"
