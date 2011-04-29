@@ -44,24 +44,24 @@
 	if (!completed)
 	{
 		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger reqIndex, BOOL *reqStop) {
-			if (!reqTask.done)
+			if (!reqTask.completed)
 			{
 				[completedTasks enumerateObjectsUsingBlock:^(Task *comTask, NSUInteger comIndex, BOOL *comStop) {
-					if ([comTask meetsRequirementTask:reqTask] && comTask.done == YES)
+					if ([comTask meetsRequirementTask:reqTask] && comTask.completed == YES)
 					{
-						reqTask.done = YES;
-						comStop = YES;
+						reqTask.completed = YES;
+						*comStop = YES;
 					}
-				}]
+				}];
 			}
 		}];
 		
-		BOOL tempCompleted = YES;
+		__block BOOL tempCompleted = YES;
 		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger index, BOOL *stop) {
-			if (!reqTask.done)
+			if (!reqTask.completed)
 			{
 				tempCompleted = NO;
-				stop = YES;
+				*stop = YES;
 			}
 		}];
 		
