@@ -10,14 +10,20 @@
 
 #import "Category.h"
 #import "Country.h"
+#import "Achievement.h"
 
 @implementation GameManager
 
-@synthesize achievements, completedCategories;
+@synthesize achievements, completedTasks;
 
-- (void)completeCategory:(Category *)category forCountry:(Country *)country duration:(NSTimeInterval)duration
+- (void)completeTask:(Task *)task
 {
+    [self.completedTasks addObject:task];
+    
 	//Enumerate achievements -> validate
+    [achievements enumerateObjectsUsingBlock:^(id achievement, NSUInteger idx, BOOL *stop) {
+//        [(Achievement *)achievement validateForCompletedCategories:self.completedCategories];
+    }];
 }
 
 @end

@@ -8,17 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Category.h"
-#import "Country.h"
-
+@class Task;
 @interface GameManager : NSObject
 {
 	
 }
 
-@property (retain) NSArray *achievements;
-@property (retain) NSArray *completedCategories;
+@property (retain) NSMutableArray *achievements;
+@property (retain) NSMutableArray *completedTasks;
 
-- (void)completeCategory:(Category *)category forCountry:(Country *)country duration:(NSTimeInterval)duration;
+- (void)completeTask:(Task *)task;
 
 @end

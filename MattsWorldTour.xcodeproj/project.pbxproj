@@ -20,6 +20,7 @@
 		5A695CBC136B5D03008089AD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A695CBA136B5D03008089AD /* MainWindow.xib */; };
 		5A695CBF136B5D03008089AD /* MattsWorldTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */; };
 		5A695CC2136B5D03008089AD /* MattsWorldTourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */; };
+		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		5A695CBD136B5D03008089AD /* MattsWorldTourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MattsWorldTourViewController.h; sourceTree = "<group>"; };
 		5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MattsWorldTourViewController.m; sourceTree = "<group>"; };
 		5A695CC1136B5D03008089AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MattsWorldTourViewController.xib; sourceTree = "<group>"; };
+		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
+		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				5A1D363A136B75EA00AB0277 /* Category.m */,
 				5A1D363C136B75F900AB0277 /* Country.h */,
 				5A1D363D136B75F900AB0277 /* Country.m */,
+				5AC9107E136B7D37000F9FB3 /* Task.h */,
+				5AC9107F136B7D37000F9FB3 /* Task.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */,
 				5A1D363B136B75EA00AB0277 /* Category.m in Sources */,
 				5A1D363E136B75F900AB0277 /* Country.m in Sources */,
+				5AC91080136B7D37000F9FB3 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
