@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class Task;
+@class Country;
+@class Category;
 @interface GameManager : NSObject
 {
 	
@@ -16,7 +18,13 @@
 
 @property (retain) NSMutableArray *achievements;
 @property (retain) NSMutableArray *tasks;
+@property (retain) Country *selectedCountry;
+@property (retain) Category *selectedCategory;
 
 - (void)completeTask:(Task *)task;
+
+- (CGRect)rectForCountryAtPoint:(CGPoint)point;
+- (NSArray *)categoriesForCountry;
+- (NSArray *)answersForCategory:(Category *)category;
 
 @end

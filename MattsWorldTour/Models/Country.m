@@ -21,4 +21,15 @@
 	return [country autorelease];
 }
 
+- (BOOL)isEqual:(id)object
+{
+    BOOL equal = NO;
+    if ([object isKindOfClass:[Country class]]) {
+        if ([self.countryCode isEqualToString:((Country*)object).countryCode]) {
+            equal = YES;
+        }
+    }
+    return equal;
+}
+
 @end

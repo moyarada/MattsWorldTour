@@ -14,17 +14,34 @@
 
 @implementation GameManager
 
-@synthesize achievements, tasks;
+@synthesize achievements=_achievements, tasks=_tasks, selectedCountry=_selectedCountry, selectedCategory=_selectedCategory;
 
 - (void)completeTask:(Task *)task
 {
-    [self.tasks addObject:task];
+    [_tasks addObject:task];
     
 	//Enumerate achievements -> validate
-    NSArray *completedTasks = [tasks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"completed == YES"]];
-    [achievements enumerateObjectsUsingBlock:^(id achievement, NSUInteger idx, BOOL *stop) {
-        [(Achievement *)achievement validateForCompletedTasks:completedTasks];
+    NSArray *completedTasks = [_tasks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"completed == YES"]];
+    [_achievements enumerateObjectsUsingBlock:^(Achievement *achievement, NSUInteger idx, BOOL *stop) {
+        [achievement validateForCompletedTasks:completedTasks];
     }];
+}
+
+- (CGRect)rectForCountryAtPoint:(CGPoint)point
+{
+    CGRect baguette = CGRectMake(0, 0, 0, 0);
+    return baguette;
+}
+
+- (NSArray *)categoriesForCountry
+{
+    
+    return nil;
+}
+
+- (NSArray *)answersForCategory:(Category *)category
+{
+    return nil;
 }
 
 @end

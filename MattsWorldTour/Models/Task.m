@@ -14,6 +14,7 @@
 
 - (BOOL)meetsRequirementTask:(Task*)reqTask
 {
+    // nil values are like wildcards
     if (reqTask.country && _country != reqTask.country)
     {
         return NO;
