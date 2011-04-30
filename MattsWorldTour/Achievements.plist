@@ -4,20 +4,187 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string></string>
+		<string>Napoleons flag carrier badge</string>
 		<key>requirements</key>
 		<array>
 			<dict>
-				<key>country</key>
-				<string></string>
 				<key>category</key>
-				<string></string>
-				<key>New item</key>
-				<string></string>
+				<string>flag</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
 			</dict>
 		</array>
 		<key>type</key>
-		<string></string>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French music enthusiast badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>anthem</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French interpreter badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>speech</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French translator badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>text</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Knowledge badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>capital</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French baguette badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>food</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>French tourist badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>landmark</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Baguette badge</string>
+		<key>requirements</key>
+		<array>
+			<dict>
+				<key>category</key>
+				<string>text</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>flag</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>anthem</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>speech</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>capital</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>food</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+			<dict>
+				<key>category</key>
+				<string>landmark</string>
+				<key>country</key>
+				<string>fr</string>
+				<key>duration</key>
+				<string>-1</string>
+			</dict>
+		</array>
+		<key>type</key>
+		<string>nvm</string>
 	</dict>
 </array>
 </plist>
