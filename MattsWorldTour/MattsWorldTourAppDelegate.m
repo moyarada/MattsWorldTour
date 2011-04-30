@@ -9,17 +9,17 @@
 #import "MattsWorldTourAppDelegate.h"
 
 #import "MattsWorldTourViewController.h"
+#import "GameManager.h"
 
 @implementation MattsWorldTourAppDelegate
 
-
 @synthesize window=_window;
-
 @synthesize viewController=_viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	// Override point for customization after application launch.
+	GameManager *gm = [[GameManager alloc] init];
+	[gm release];
 	 
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];

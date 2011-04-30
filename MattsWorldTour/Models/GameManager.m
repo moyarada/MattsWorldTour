@@ -21,7 +21,7 @@
 	self = [super init];
 	if (self)
 	{
-		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:@"Countries.plist"];
+		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Countries" ofType:@"plist"]];
 		NSMutableArray *countriesArray = [NSMutableArray array];
 		[countriesTemp enumerateObjectsUsingBlock:^(NSDictionary *countryInfo, NSUInteger index, BOOL *stop) {
 			NSMutableArray *categoriesArray = [NSMutableArray array];
@@ -33,6 +33,7 @@
 			newCountry.categories = categoriesArray;
 			[countriesArray addObject:newCountry];
 		}];
+		countries = countriesArray;
 	}
 	return self;
 }
