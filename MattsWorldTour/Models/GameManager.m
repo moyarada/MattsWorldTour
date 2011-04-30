@@ -27,4 +27,21 @@
     }];
 }
 
+- (CGRect)rectForCountryAtPoint:(CGPoint)point
+{
+    CGRect baguette = CGRectMake(0, 0, 0, 0);
+    return baguette;
+}
+
+- (NSArray *)categoriesForCountry
+{
+    
+    return nil;
+}
+
+- (NSArray *)answersForCategory:(Category *)category
+{
+    return nil;
+}
+
 @end
