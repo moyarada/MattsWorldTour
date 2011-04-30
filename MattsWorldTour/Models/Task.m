@@ -10,17 +10,22 @@
 
 @implementation Task
 
-@synthesize completed, country=country_, category=category_;
+@synthesize completed, country=_country, category=_category, duration=_duration;
 
-- (BOOL)meetsRequirementTask:(Task*)task
+- (BOOL)meetsRequirementTask:(Task*)reqTask
 {
-    BOOL equal = NO;
-    if (self.country == task.country && self.category == task.category)
-	{
-		
+    if (reqTask.country && _country != reqTask.country)
+    {
+        return NO;
     }
-    
-    return equal;
+    else if (reqTask.category && _category != reqTask.category)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 
 @end

@@ -13,13 +13,12 @@
 
 @interface Task : NSObject
 {
-    Country *country_;
-    Category *category_;
 }
 
 @property (assign) BOOL completed;
 @property (retain) Country *country;
 @property (retain) Category *category;
+@property (assign) NSTimeInterval duration;
 
 - (BOOL)meetsRequirementTask:(Task*)task;
 
