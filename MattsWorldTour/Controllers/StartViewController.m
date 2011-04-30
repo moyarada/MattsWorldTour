@@ -9,7 +9,7 @@
 #import "StartViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define M_PI   3.14159265358979323846264338327950288   /* pi */
+//#define M_PI   3.14159265358979323846264338327950288   /* pi */
 
 @implementation StartViewController
 @synthesize rotatingSunImage;
@@ -47,7 +47,7 @@
     fullRotation.fromValue = [NSNumber numberWithFloat:0]; 
     fullRotation.toValue = [NSNumber numberWithFloat:(2*M_PI)]; 
     fullRotation.duration = 20.0; 
-    fullRotation.repeatCount = 1e100f;
+	fullRotation.repeatCount = MAXFLOAT;
     [self.rotatingSunImage.layer addAnimation:fullRotation forKey:@"jolly"]; 
 }
 
