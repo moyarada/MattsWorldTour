@@ -57,6 +57,7 @@
 
 - (NSArray *)categoriesForSelectedCountry
 {
+    // Skub
     return _selectedCountry.categories;
 }
 
