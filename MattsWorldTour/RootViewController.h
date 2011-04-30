@@ -14,11 +14,13 @@ typedef enum {
 	eMapZoomLevelCountry,
 } MapZoomLevel;
 
+
 @interface RootViewController : UIViewController
 {
 	// Call me a pussy, but I like to easily see what's an instance var
 	MapZoomLevel zoomLevel_;
 	BOOL isZooming_;
+	IBOutlet UIImageView *mapView_;
 }
 
 @end
