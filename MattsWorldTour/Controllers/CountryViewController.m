@@ -8,13 +8,16 @@
 
 #import "CountryViewController.h"
 
+#import "MattsWorldTourAppDelegate.h"
+
 @implementation CountryViewController
 
 - (id)init
 {
     self = [super initWithNibName:@"CountryViewController" bundle:nil];
-    if (self) {
-        
+    if (self)
+	{
+//		NSLog(@"categories: %@", [((MattsWorldTourAppDelegate *)[UIApplication sharedApplication]).gameManager categoriesForCountry]);
     }
     return self;
 }
