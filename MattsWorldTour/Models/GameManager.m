@@ -42,22 +42,26 @@
 {
     [_tasks addObject:task];
     
-	//Enumerate achievements -> validate
     NSArray *completedTasks = [_tasks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"completed == YES"]];
-    [_achievements enumerateObjectsUsingBlock:^(Achievement *achievement, NSUInteger idx, BOOL *stop) {
+    [_achievements enumerateObjectsUsingBlock:^(Achievement *achievement, NSUInteger index, BOOL *stop) {
         [achievement validateForCompletedTasks:completedTasks];
     }];
 }
 
 - (CGRect)rectForCountryAtPoint:(CGPoint)point
 {
+	[countries enumerateObjectsUsingBlock:^(Country *country, NSUInteger index, BOOL *stop) {
+		if (country.countryCode)
+		{
+			self.selectedCountry = country;
+		}
+	}];
     CGRect baguette = CGRectMake(0, 0, 0, 0);
     return baguette;
 }
 
 - (NSArray *)categoriesForCountry
 {
-    
     return nil;
 }
 

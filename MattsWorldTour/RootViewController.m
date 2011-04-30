@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 
+#import "MattsWorldTourAppDelegate.h"
 #import "CountryViewController.h"
 
 @implementation RootViewController
@@ -28,6 +29,8 @@
 	[countryVC release];
 	 
 	[UIView commitAnimations];
+	
+	[((MattsWorldTourAppDelegate *)[UIApplication sharedApplication]).gameManager rectForCountryAtPoint:CGPointMake(0, 0)];
 }
 
 #pragma mark - View lifecycle

@@ -34,7 +34,7 @@
 
 - (NSString *)name
 {
-	NSString *name;
+	NSString *name = nil;
 	
 	if (self.type == CategoryTypeFlag)
 	{
@@ -77,19 +77,19 @@
 	}
 	else if ([typeString isEqualToString:@"WordsSpoken"])
 	{
-		type = CategoryTypeAnthem;
+		type = CategoryTypeWordsSpoken;
 	}
 	else if ([typeString isEqualToString:@"WrittenText"])
 	{
-		type = CategoryTypeAnthem;
+		type = CategoryTypeWrittenText;
 	}
 	else if ([typeString isEqualToString:@"Landmark"])
 	{
-		type = CategoryTypeAnthem;
+		type = CategoryTypeLandmark;
 	}
-	else if ([typeString isEqualToString:@"CapitalName"])
+	else// if ([typeString isEqualToString:@"CapitalName"])
 	{
-		type = CategoryTypeAnthem;
+		type = CategoryTypeCapitalName;
 	}
 	
 	return type;
