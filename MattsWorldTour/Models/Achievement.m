@@ -43,29 +43,29 @@
 {
 	if (!completed)
 	{
-		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger reqIndex, BOOL *reqStop) {
-			if (!reqTask.completed)
-			{
-				[completedTasks enumerateObjectsUsingBlock:^(Task *comTask, NSUInteger comIndex, BOOL *comStop) {
+		[completedTasks enumerateObjectsUsingBlock:^(Task *comTask, NSUInteger comIndex, BOOL *comStop) {
+			[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger reqIndex, BOOL *reqStop) {
+				if (!reqTask.completed)
+				{
 					if ([comTask meetsRequirementTask:reqTask] && comTask.completed == YES)
 					{
 						reqTask.completed = YES;
 						*comStop = YES;
 					}
-				}];
-			}
+				}
+			}];
 		}];
 		
-		__block BOOL tempCompleted = YES;
+		__block BOOL achievementCompleted = YES;
 		[self.requirements enumerateObjectsUsingBlock:^(Task *reqTask, NSUInteger index, BOOL *stop) {
 			if (!reqTask.completed)
 			{
-				tempCompleted = NO;
-				*stop = YES;
+				achievementCompleted = NO;
 			}
+			reqTask.completed = NO;
 		}];
 		
-		completed = tempCompleted;
+		completed = achievementCompleted;
 	}
 }
 
