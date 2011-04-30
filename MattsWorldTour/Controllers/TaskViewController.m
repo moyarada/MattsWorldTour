@@ -28,7 +28,9 @@
     return self;
 }
 
-- (IBAction)chooseAnswer:(id)sender forEvent:(UIEvent *)event {
+- (IBAction)chooseAnswer:(UIButton *)sender
+{
+	
 }
 
 - (void)dealloc
