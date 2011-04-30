@@ -18,10 +18,16 @@
 }
 
 - (void)goToSpain
-{
+{	
+	[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
+	[UIView setAnimationDuration:0.75];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+	
 	CountryViewController *countryVC = [[CountryViewController alloc] init];
-	[self.navigationController pushViewController:countryVC animated:YES];
+	[self.navigationController pushViewController:countryVC animated:NO];
 	[countryVC release];
+	 
+	[UIView commitAnimations];
 }
 
 #pragma mark - View lifecycle
