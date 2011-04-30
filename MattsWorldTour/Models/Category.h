@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    CategoryTypeFlag = 0,
+    CategoryTypeAnthem
+} CategoryType;
+
 @interface Category : NSObject
 {
-    
 }
-
+@property (readonly) NSString *name;
+@property (assign) CategoryType type;
 @end
