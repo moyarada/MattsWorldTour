@@ -7,8 +7,9 @@
 //
 
 #import "RootViewController.h"
-
 #import "CountryViewController.h"
+
+
 
 @implementation RootViewController
 
@@ -17,26 +18,56 @@
     [super dealloc];
 }
 
-- (void)goToSpain
+- (void)zoomIn
 {	
-	[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
-	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
 	
-	CountryViewController *countryVC = [[CountryViewController alloc] init];
-	[self.navigationController pushViewController:countryVC animated:NO];
-	[countryVC release];
-	 
-	[UIView commitAnimations];
+	// The user tapped the map, and we should zoom in, whatever that entails.
+	
+	isZooming_ = YES;
+	zoomLevel_ = eMapZoomLevelCountry; // Temporily force going to the country view
+	
+	
+	if (zoomLevel_ == eMapZoomLevelWorld) {
+		
+		// Zoom to Europe map.
+		
+		
+		
+	}
+	
+	else if (zoomLevel_ == eMapZoomLevelContinent) {
+		
+		// Zoom to France.
+		
+		
+	}
+	
+	else if (zoomLevel_ == eMapZoomLevelCountry) {
+		
+		// Transform to the country view (showing the question and stuff).
+		
+		[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
+		[UIView setAnimationDuration:0.75];
+		[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+		
+		CountryViewController *countryVC = [[CountryViewController alloc] init];
+		[self.navigationController pushViewController:countryVC animated:NO];
+		[countryVC release];
+		 
+		[UIView commitAnimations];
+	}
 }
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	
-	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToSpain)];
+	// Set initial zoom level.
+	zoomLevel_ = eMapZoomLevelWorld;
+	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomIn)];
 	[self.view addGestureRecognizer:tapGesture];
 	[tapGesture release];
 }

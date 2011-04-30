@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2934E40C136C8B1D0099A9B2 /* CardZoom1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2934E40A136C8B1D0099A9B2 /* CardZoom1.png */; };
+		2934E40D136C8B1D0099A9B2 /* CardZoom2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2934E40B136C8B1D0099A9B2 /* CardZoom2.png */; };
+		29BE8999136C8DAF000E0E31 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29BE8997136C8DAF000E0E31 /* RootViewController.xib */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2934E40A136C8B1D0099A9B2 /* CardZoom1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardZoom1.png; sourceTree = "<group>"; };
+		2934E40B136C8B1D0099A9B2 /* CardZoom2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardZoom2.png; sourceTree = "<group>"; };
+		29BE8998136C8DAF000E0E31 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			children = (
 				5A695CBA136B5D03008089AD /* MainWindow.xib */,
 				5A9C5795136C8B36003FF725 /* CountryViewController.xib */,
+				29BE8997136C8DAF000E0E31 /* RootViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2934E40A136C8B1D0099A9B2 /* CardZoom1.png */,
+				2934E40B136C8B1D0099A9B2 /* CardZoom2.png */,
 				5A677705136C51B000AA1A49 /* game.bundle */,
 			);
 			path = Resources;
@@ -228,6 +237,9 @@
 				5A677706136C51B000AA1A49 /* game.bundle in Resources */,
 				5A9C5780136C8886003FF725 /* Achievements.plist in Resources */,
 				5A9C5796136C8B36003FF725 /* CountryViewController.xib in Resources */,
+				2934E40C136C8B1D0099A9B2 /* CardZoom1.png in Resources */,
+				2934E40D136C8B1D0099A9B2 /* CardZoom2.png in Resources */,
+				29BE8999136C8DAF000E0E31 /* RootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +265,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		29BE8997136C8DAF000E0E31 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29BE8998136C8DAF000E0E31 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
 		5A695CB1136B5D03008089AD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
