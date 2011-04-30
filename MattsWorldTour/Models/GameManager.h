@@ -25,7 +25,7 @@
 - (void)completeTask:(Task *)task;
 
 - (CGRect)rectForCountryAtPoint:(CGPoint)point;
-- (NSArray *)categoriesForCountry;
+- (NSArray *)categoriesForSelectedCountry;
 - (NSArray *)answersForCategory:(Category *)category;
 
 @end

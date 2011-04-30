@@ -10,6 +10,8 @@
 
 #import "GameManager.h"
 
+#import "Task.h"
+
 @implementation MattsWorldTourAppDelegate
 
 @synthesize gameManager;
