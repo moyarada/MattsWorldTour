@@ -8,6 +8,9 @@
 
 #import "Task.h"
 
+#import "Country.h"
+#import "Category.h"
+
 @implementation Task
 
 @synthesize completed, country=_country, category=_category, duration=_duration;
@@ -27,6 +30,12 @@
     {
         return YES;
     }
+}
+
+- (NSString *)filePathForTaskResource
+{
+    // Region is hardcoded
+    return [NSString stringWithFormat:@"%@/%@/%@%@", kGameBundle, [_category.name lowercaseString], [_country.countryCode lowercaseString], @".png"];
 }
 
 @end
