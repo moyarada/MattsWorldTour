@@ -9,8 +9,6 @@
 #import "RootViewController.h"
 #import "CountryViewController.h"
 
-
-
 @implementation RootViewController
 
 @synthesize mapView=mapView_;
