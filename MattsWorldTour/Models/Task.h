@@ -18,6 +18,7 @@
 @property (retain) Category *category;
 @property (assign) NSTimeInterval duration;
 
++ (Task *)taskWithCountry:(Country *)country category:(Category *)category;
 - (BOOL)meetsRequirementTask:(Task*)task;
 - (NSString *)filePathForTaskResource;
 @end

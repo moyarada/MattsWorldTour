@@ -11,6 +11,8 @@
 #import "MattsWorldTourViewController.h"
 #import "GameManager.h"
 
+#import "Task.h"
+
 @implementation MattsWorldTourAppDelegate
 
 @synthesize window=_window;
