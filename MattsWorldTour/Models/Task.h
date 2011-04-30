@@ -12,8 +12,6 @@
 @class Category;
 
 @interface Task : NSObject
-{
-}
 
 @property (assign) BOOL completed;
 @property (retain) Country *country;

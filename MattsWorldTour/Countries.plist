@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>countryCode</key>
+		<string>FR</string>
+		<key>countryName</key>
+		<string>France</string>
+		<key>categories</key>
+		<array>
+			<string>Flag</string>
+			<string>Anthem</string>
+			<string>WordsSpoken</string>
+			<string>WrittenText</string>
+			<string>Landmark</string>
+			<string>CapitalName</string>
+		</array>
+	</dict>
+	<dict>
+		<key>countryCode</key>
+		<string>ES</string>
+		<key>countryName</key>
+		<string>Spain</string>
+		<key>categories</key>
+		<array>
+			<string>Flag</string>
+			<string>Anthem</string>
+			<string>WordsSpoken</string>
+			<string>WrittenText</string>
+			<string>Landmark</string>
+			<string>CapitalName</string>
+		</array>
+	</dict>
+	<dict>
+		<key>countryCode</key>
+		<string>PO</string>
+		<key>countryName</key>
+		<string>Portugal</string>
+		<key>categories</key>
+		<array>
+			<string>Flag</string>
+			<string>Anthem</string>
+			<string>WordsSpoken</string>
+			<string>WrittenText</string>
+			<string>Landmark</string>
+			<string>CapitalName</string>
+		</array>
+	</dict>
+</array>
+</plist>

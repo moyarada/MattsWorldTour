@@ -10,12 +10,21 @@
 
 typedef enum {
     CategoryTypeFlag = 0,
-    CategoryTypeAnthem
-} CategoryType;
+    CategoryTypeAnthem,
+	CategoryTypeWordsSpoken,
+	CategoryTypeWrittenText,
+	CategoryTypeLandmark,
+	CategoryTypeCapitalName
+}
+CategoryType;
 
 @interface Category : NSObject
-{
-}
+
 @property (readonly) NSString *name;
 @property (assign) CategoryType type;
+
++ (Category *)categoryWithType:(NSString *)nTypeString;
+
+- (CategoryType)typeFromString:(NSString *)typeString;
+
 @end

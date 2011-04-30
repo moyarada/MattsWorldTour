@@ -9,13 +9,23 @@
 #import "Category.h"
 
 @implementation Category
+
 @synthesize type=_type;
+
++ (Category *)categoryWithType:(NSString *)nTypeString
+{
+	Category *category = [[Category alloc] init];
+	category.type = [category typeFromString:nTypeString];
+	return [category autorelease];
+}
 
 - (BOOL)isEqual:(id)object
 {
     BOOL equal = NO;
-    if ([object isKindOfClass:[Category class]]) {
-        if (self.type == ((Category*)object).type) {
+    if ([object isKindOfClass:[Category class]])
+	{
+        if (self.type == ((Category*)object).type)
+		{
             equal = YES;
         }
     }
@@ -24,6 +34,65 @@
 
 - (NSString *)name
 {
-    return @"Name!";
+	NSString *name;
+	
+	if (self.type == CategoryTypeFlag)
+	{
+		name = @"Flag";
+	}
+	else if (self.type == CategoryTypeAnthem)
+	{
+		name = @"National anthem";
+	}
+	else if (self.type == CategoryTypeWordsSpoken)
+	{
+		name = @"Spoken words";
+	}
+	else if (self.type == CategoryTypeWrittenText)
+	{
+		name = @"Written text";
+	}
+	else if (self.type == CategoryTypeLandmark)
+	{
+		name = @"Famous landmark";
+	}
+	else if (self.type == CategoryTypeCapitalName)
+	{
+		name = @"Capital name";
+	}
+	
+	return name;
 }
+
+- (CategoryType)typeFromString:(NSString *)typeString
+{
+	CategoryType type;
+	if ([typeString isEqualToString:@"Flag"])
+	{
+		type = CategoryTypeFlag;
+	}
+	else if ([typeString isEqualToString:@"Anthem"])
+	{
+		type = CategoryTypeAnthem;
+	}
+	else if ([typeString isEqualToString:@"WordsSpoken"])
+	{
+		type = CategoryTypeAnthem;
+	}
+	else if ([typeString isEqualToString:@"WrittenText"])
+	{
+		type = CategoryTypeAnthem;
+	}
+	else if ([typeString isEqualToString:@"Landmark"])
+	{
+		type = CategoryTypeAnthem;
+	}
+	else if ([typeString isEqualToString:@"CapitalName"])
+	{
+		type = CategoryTypeAnthem;
+	}
+	
+	return type;
+}
+
 @end

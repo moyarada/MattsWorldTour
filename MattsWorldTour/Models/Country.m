@@ -18,7 +18,7 @@
 	country.countryCode = [countryInfo objectForKey:@"code"];
 	country.countryName = [countryInfo objectForKey:@"name"];
 	country.categories = [countryInfo objectForKey:@"categories"];
-	return country;
+	return [country autorelease];
 }
 
 @end

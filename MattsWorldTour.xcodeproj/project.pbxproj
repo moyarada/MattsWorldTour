@@ -11,6 +11,7 @@
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
 		5A1D363E136B75F900AB0277 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363D136B75F900AB0277 /* Country.m */; };
+		5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A1D3653136C1CC100AB0277 /* Countries.plist */; };
 		5A695CA9136B5D03008089AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CA8136B5D03008089AD /* UIKit.framework */; };
 		5A695CAB136B5D03008089AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CAA136B5D03008089AD /* Foundation.framework */; };
 		5A695CAD136B5D03008089AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A695CAC136B5D03008089AD /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 		5A1D363A136B75EA00AB0277 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = Models/Category.m; sourceTree = "<group>"; };
 		5A1D363C136B75F900AB0277 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Country.h; path = Models/Country.h; sourceTree = "<group>"; };
 		5A1D363D136B75F900AB0277 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Country.m; path = Models/Country.m; sourceTree = "<group>"; };
+		5A1D3653136C1CC100AB0277 /* Countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Countries.plist; sourceTree = "<group>"; };
 		5A695CA4136B5D03008089AD /* MattsWorldTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MattsWorldTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A695CA8136B5D03008089AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A695CAA136B5D03008089AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,6 +148,7 @@
 				5A695CB1136B5D03008089AD /* InfoPlist.strings */,
 				5A695CB4136B5D03008089AD /* MattsWorldTour-Prefix.pch */,
 				5A695CB5136B5D03008089AD /* main.m */,
+				5A1D3653136C1CC100AB0277 /* Countries.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				5A695CB3136B5D03008089AD /* InfoPlist.strings in Resources */,
 				5A695CBC136B5D03008089AD /* MainWindow.xib in Resources */,
 				5A695CC2136B5D03008089AD /* MattsWorldTourViewController.xib in Resources */,
+				5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
