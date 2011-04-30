@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2934E40C136C8B1D0099A9B2 /* CardZoom1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2934E40A136C8B1D0099A9B2 /* CardZoom1.png */; };
+		2934E40D136C8B1D0099A9B2 /* CardZoom2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2934E40B136C8B1D0099A9B2 /* CardZoom2.png */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2934E40A136C8B1D0099A9B2 /* CardZoom1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardZoom1.png; sourceTree = "<group>"; };
+		2934E40B136C8B1D0099A9B2 /* CardZoom2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CardZoom2.png; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2934E40A136C8B1D0099A9B2 /* CardZoom1.png */,
+				2934E40B136C8B1D0099A9B2 /* CardZoom2.png */,
 				5A677705136C51B000AA1A49 /* game.bundle */,
 			);
 			path = Resources;
@@ -228,6 +234,8 @@
 				5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */,
 				5AD2DBDE136C56BB002958E9 /* CountryViewController.xib in Resources */,
 				5A677706136C51B000AA1A49 /* game.bundle in Resources */,
+				2934E40C136C8B1D0099A9B2 /* CardZoom1.png in Resources */,
+				2934E40D136C8B1D0099A9B2 /* CardZoom2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
