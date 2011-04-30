@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class MattsWorldTourViewController;
+#import "GameManager.h"
 
-@interface MattsWorldTourAppDelegate : NSObject <UIApplicationDelegate> {
+@interface MattsWorldTourAppDelegate : NSObject <UIApplicationDelegate>
+{
 
 }
 
+@property (retain) GameManager *gameManager;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @end

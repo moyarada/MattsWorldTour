@@ -3,10 +3,21 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>categories</key>
+		<array>
+			<string>Flag</string>
+			<string>Anthem</string>
+			<string>WordsSpoken</string>
+			<string>WrittenText</string>
+			<string>Landmark</string>
+			<string>CapitalName</string>
+		</array>
 		<key>countryCode</key>
 		<string>FR</string>
 		<key>countryName</key>
 		<string>France</string>
+	</dict>
+	<dict>
 		<key>categories</key>
 		<array>
 			<string>Flag</string>
@@ -16,27 +27,12 @@
 			<string>Landmark</string>
 			<string>CapitalName</string>
 		</array>
-	</dict>
-	<dict>
 		<key>countryCode</key>
 		<string>ES</string>
 		<key>countryName</key>
 		<string>Spain</string>
-		<key>categories</key>
-		<array>
-			<string>Flag</string>
-			<string>Anthem</string>
-			<string>WordsSpoken</string>
-			<string>WrittenText</string>
-			<string>Landmark</string>
-			<string>CapitalName</string>
-		</array>
 	</dict>
 	<dict>
-		<key>countryCode</key>
-		<string>PO</string>
-		<key>countryName</key>
-		<string>Portugal</string>
 		<key>categories</key>
 		<array>
 			<string>Flag</string>
@@ -46,6 +42,10 @@
 			<string>Landmark</string>
 			<string>CapitalName</string>
 		</array>
+		<key>countryCode</key>
+		<string>PT</string>
+		<key>countryName</key>
+		<string>Portugal</string>
 	</dict>
 </array>
 </plist>

@@ -12,12 +12,12 @@
 
 @implementation MattsWorldTourAppDelegate
 
+@synthesize gameManager;
 @synthesize window=_window, navigationController=_navigationController;;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	GameManager *gm = [[GameManager alloc] init];
-	[gm release];
+	self.gameManager = [[[GameManager alloc] init] autorelease];
 	 
 	self.window.rootViewController = self.navigationController;
 	[self.window makeKeyAndVisible];
