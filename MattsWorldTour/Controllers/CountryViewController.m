@@ -21,7 +21,8 @@
 
 - (void)dealloc
 {
-    [super dealloc];
+	[mattView_ release], mattView_ = nil;
+	[super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,8 +37,32 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	[super viewDidLoad];
+	// Do any additional setup after loading the view from its nib.
+	
+	// Add the Matt subview offscreen, ready to fall down.
+	mattView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Matt-falling.png"]];
+	CGRect frame = [mattView_ bounds];
+	frame.origin = CGPointMake (24, -frame.size.height);
+	[mattView_ setFrame:frame];
+	
+	[[self view] addSubview:mattView_];
+	
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	
+	// Have Matt drop down from the sky.
+	
+	[super viewDidAppear:animated];
+	
+	// Animate him down (later we need to animate the images within the animating view as well).
+	[UIView animateWithDuration:1.2 animations:^(void) {
+		CGRect frame = [mattView_ frame];
+		frame.origin.y = [[self view] bounds].size.height - frame.size.height - 20; // Last number is bottom margin
+		[mattView_ setFrame:frame];
+	}];
+	
 }
 
 - (void)viewDidUnload
