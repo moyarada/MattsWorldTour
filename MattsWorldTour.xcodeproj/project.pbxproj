@@ -122,6 +122,7 @@
 				5A695CBA136B5D03008089AD /* MainWindow.xib */,
 				5A9C5795136C8B36003FF725 /* CountryViewController.xib */,
 				5AAE0299136C9C6000E8079D /* TaskViewController.xib */,
+				29BE8997136C8DAF000E0E31 /* RootViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -248,6 +249,10 @@
 				5A9C5780136C8886003FF725 /* Achievements.plist in Resources */,
 				5A9C5796136C8B36003FF725 /* CountryViewController.xib in Resources */,
 				5AAE029B136C9C6000E8079D /* TaskViewController.xib in Resources */,
+				2934E40D136C8B1D0099A9B2 /* Map-Europe.png in Resources */,
+				29BE8999136C8DAF000E0E31 /* RootViewController.xib in Resources */,
+				29BE899F136CB174000E0E31 /* Map-World.png in Resources */,
+				29BE89A1136CB6BF000E0E31 /* Map-France.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
