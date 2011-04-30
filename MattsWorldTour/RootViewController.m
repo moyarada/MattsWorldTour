@@ -11,7 +11,11 @@
 #import "MattsWorldTourAppDelegate.h"
 #import "CountryViewController.h"
 
+
+
 @implementation RootViewController
+
+@synthesize mapView=mapView_;
 
 - (void)dealloc
 {
@@ -35,9 +39,12 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	
-	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToSpain)];
+	// Set initial zoom level.
+	zoomLevel_ = eMapZoomLevelWorld;
+	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomIn)];
 	[self.view addGestureRecognizer:tapGesture];
 	[tapGesture release];
 }

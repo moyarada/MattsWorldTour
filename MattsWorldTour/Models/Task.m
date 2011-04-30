@@ -17,7 +17,7 @@
 
 + (Task *)taskWithCountry:(Country *)country category:(Category *)category
 {
-    Task *task = [[Task alloc] init];
+    Task *task = [[[Task alloc] init] autorelease];
     task.country = country;
     task.category = category;
     task.duration = -1;
@@ -56,11 +56,12 @@
             
             return match;
         }]];
-        for (NSString *entity in filteredContents) {
+        if ([filteredContents count] > 0) {
+            return [filteredContents objectAtIndex:(arc4random() % [filteredContents count])];
         }
     }
     
-    return @"NO";
+    return nil;
 }
 
 @end

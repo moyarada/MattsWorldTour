@@ -14,7 +14,7 @@
 
 @implementation GameManager
 
-@synthesize achievements=_achievements, tasks=_tasks, selectedCountry=_selectedCountry, selectedCategory=_selectedCategory;
+@synthesize achievements=_achievements, tasks=_tasks, selectedCountry=_selectedCountry;
 
 - (id)init
 {
@@ -69,8 +69,19 @@
 - (NSArray *)answersForCategory:(Category *)category
 {
     NSMutableArray *answers = [[[NSMutableArray alloc] initWithCapacity:kNumberOfAnswers] autorelease];
+//    for (int i=0; i < kNumberOfAnswers; i++) {
+//        // first is the winning answer!
+//        if (i == 0) {
+//            [answers addObject:[Task taskWithCountry:_selectedCountry category:_selectedCategory]];
+//        }
+//        else {
+//        }
+//    }
+    [answers addObject:[Task taskWithCountry:[countries objectAtIndex:0] category:category]];
+    [answers addObject:[Task taskWithCountry:[countries objectAtIndex:1] category:category]];
+    [answers addObject:[Task taskWithCountry:[countries objectAtIndex:2] category:category]];
     
-    return nil;
+    return answers;
 }
 
 @end

@@ -20,7 +20,6 @@
 @property (retain) NSMutableArray *achievements;
 @property (retain) NSMutableArray *tasks;
 @property (retain) Country *selectedCountry;
-@property (retain) Category *selectedCategory;
 
 - (void)completeTask:(Task *)task;
 
