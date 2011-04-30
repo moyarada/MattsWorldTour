@@ -20,7 +20,8 @@ typedef enum {
 	// Call me a pussy, but I like to easily see what's an instance var
 	MapZoomLevel zoomLevel_;
 	BOOL isZooming_;
-	IBOutlet UIImageView *mapView_;
 }
+
+@property (nonatomic, retain) IBOutlet UIImageView *mapView;
 
 @end

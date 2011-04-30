@@ -37,18 +37,17 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
-			<object class="IBUIView" id="293279935">
+			<object class="IBUIView" id="998764570">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIImageView" id="857241008">
-						<reference key="NSNextResponder" ref="293279935"/>
+						<reference key="NSNextResponder" ref="998764570"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 10}, {1024, 748}}</string>
-						<reference key="NSSuperview" ref="293279935"/>
+						<reference key="NSSuperview" ref="998764570"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<int key="IBUIContentMode">4</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -73,19 +72,19 @@
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
+						<string key="label">mapView</string>
 						<reference key="source" ref="841351856"/>
 						<reference key="destination" ref="857241008"/>
 					</object>
-					<int key="connectionID">8</int>
+					<int key="connectionID">11</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">mapView_</string>
+						<string key="label">view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="857241008"/>
+						<reference key="destination" ref="998764570"/>
 					</object>
-					<int key="connectionID">10</int>
+					<int key="connectionID">12</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -110,7 +109,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
-						<reference key="object" ref="293279935"/>
+						<reference key="object" ref="998764570"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="857241008"/>
@@ -120,7 +119,7 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
 						<reference key="object" ref="857241008"/>
-						<reference key="parent" ref="293279935"/>
+						<reference key="parent" ref="998764570"/>
 					</object>
 				</object>
 			</object>
@@ -153,7 +152,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">10</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -162,13 +161,13 @@
 					<string key="className">RootViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">mapView_</string>
+						<string key="NS.key.0">mapView</string>
 						<string key="NS.object.0">UIImageView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">mapView_</string>
+						<string key="NS.key.0">mapView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">mapView_</string>
+							<string key="name">mapView</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
 					</object>
