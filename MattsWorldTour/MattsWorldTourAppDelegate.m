@@ -10,7 +10,7 @@
 
 #import "GameManager.h"
 
-#import "Task.h"
+#import "StartViewController.h"
 
 @implementation MattsWorldTourAppDelegate
 
@@ -23,6 +23,8 @@
 	 
 	self.window.rootViewController = self.navigationController;
 	[self.window makeKeyAndVisible];
+    StartViewController *startViewController = [[StartViewController alloc] initWithNibName:@"StartViewController" bundle:nil];
+    [self.navigationController presentModalViewController:startViewController animated:NO];
     return YES;
 }
 
