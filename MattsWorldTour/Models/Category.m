@@ -60,6 +60,10 @@
 	{
 		name = @"Capital name";
 	}
+	else if (self.type == CategoryTypeFood)
+	{
+		name = @"Food";
+	}
 	
 	return name;
 }
@@ -87,9 +91,13 @@
 	{
 		type = CategoryTypeLandmark;
 	}
-	else// if ([typeString isEqualToString:@"CapitalName"])
+	else if ([typeString isEqualToString:@"CapitalName"])
 	{
 		type = CategoryTypeCapitalName;
+	}
+	else
+	{
+		type = CategoryTypeFood;
 	}
 	
 	return type;

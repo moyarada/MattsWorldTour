@@ -15,8 +15,8 @@
 + (Country *)countryWithDictionary:(NSDictionary *)countryInfo
 {
 	Country *country = [[Country alloc] init];
-	country.countryCode = [countryInfo objectForKey:@"code"];
-	country.countryName = [countryInfo objectForKey:@"name"];
+	country.countryCode = [countryInfo objectForKey:@"countryCode"];
+	country.countryName = [countryInfo objectForKey:@"countryName"];
 	country.categories = [countryInfo objectForKey:@"categories"];
 	return [country autorelease];
 }

@@ -19,18 +19,16 @@
 }
 
 - (void)goToSpain
-{	
-	[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
-	[UIView setAnimationDuration:0.75];
-	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+{
+	[((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager rectForCountryAtPoint:CGPointMake(0, 0)];
 	
-	CountryViewController *countryVC = [[CountryViewController alloc] init];
-	[self.navigationController pushViewController:countryVC animated:NO];
-	[countryVC release];
-	 
-	[UIView commitAnimations];
-	
-	[((MattsWorldTourAppDelegate *)[UIApplication sharedApplication]).gameManager rectForCountryAtPoint:CGPointMake(0, 0)];
+	[UIView animateWithDuration:0.75 animations:^{
+		[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:YES];
+		
+		CountryViewController *countryVC = [[CountryViewController alloc] init];
+		[self.navigationController pushViewController:countryVC animated:NO];
+		[countryVC release];
+	}];
 }
 
 #pragma mark - View lifecycle

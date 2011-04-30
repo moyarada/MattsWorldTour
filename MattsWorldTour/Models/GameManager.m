@@ -22,7 +22,7 @@
 	if (self)
 	{
 		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Countries" ofType:@"plist"]];
-		NSMutableArray *countriesArray = [NSMutableArray array];
+		NSMutableArray *countriesArray = [[NSMutableArray alloc] init];
 		[countriesTemp enumerateObjectsUsingBlock:^(NSDictionary *countryInfo, NSUInteger index, BOOL *stop) {
 			NSMutableArray *categoriesArray = [NSMutableArray array];
 			Country *newCountry = [Country countryWithDictionary:countryInfo];
@@ -50,8 +50,9 @@
 
 - (CGRect)rectForCountryAtPoint:(CGPoint)point
 {
-	[countries enumerateObjectsUsingBlock:^(Country *country, NSUInteger index, BOOL *stop) {
-		if (country.countryCode)
+	[countries enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
+		Country *country = (Country *)obj;
+		if ([country.countryCode isEqualToString:@"FR"])
 		{
 			self.selectedCountry = country;
 		}
@@ -62,7 +63,7 @@
 
 - (NSArray *)categoriesForSelectedCountry
 {
-    return nil;
+    return _selectedCountry.categories;
 }
 
 - (NSArray *)answersForCategory:(Category *)category

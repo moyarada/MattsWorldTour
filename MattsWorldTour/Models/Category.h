@@ -14,7 +14,8 @@ typedef enum {
 	CategoryTypeWordsSpoken,
 	CategoryTypeWrittenText,
 	CategoryTypeLandmark,
-	CategoryTypeCapitalName
+	CategoryTypeCapitalName,
+	CategoryTypeFood
 }
 CategoryType;
 
