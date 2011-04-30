@@ -13,4 +13,5 @@
 	#import <Foundation/Foundation.h>
 #endif
 
-#define kGameBundle @"game.bundle"
+#define kGameBundle [[NSBundle mainBundle] pathForResource:@"game" ofType:@"bundle"]
+#define kNumberOfAnswers 3

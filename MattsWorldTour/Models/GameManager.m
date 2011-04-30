@@ -60,13 +60,15 @@
     return baguette;
 }
 
-- (NSArray *)categoriesForCountry
+- (NSArray *)categoriesForSelectedCountry
 {
     return nil;
 }
 
 - (NSArray *)answersForCategory:(Category *)category
 {
+    NSMutableArray *answers = [[[NSMutableArray alloc] initWithCapacity:kNumberOfAnswers] autorelease];
+    
     return nil;
 }
 

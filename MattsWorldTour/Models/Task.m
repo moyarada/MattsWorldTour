@@ -15,6 +15,16 @@
 
 @synthesize completed, country=_country, category=_category, duration=_duration;
 
++ (Task *)taskWithCountry:(Country *)country category:(Category *)category
+{
+    Task *task = [[Task alloc] init];
+    task.country = country;
+    task.category = category;
+    task.duration = -1;
+    task.completed = NO;
+    return task;
+}
+
 - (BOOL)meetsRequirementTask:(Task*)reqTask
 {
     // nil values are like wildcards
@@ -34,8 +44,23 @@
 
 - (NSString *)filePathForTaskResource
 {
-    // Region is hardcoded
-    return [NSString stringWithFormat:@"%@/%@/%@%@", kGameBundle, [_category.name lowercaseString], [_country.countryCode lowercaseString], @".png"];
+    NSString *categoryPath = [NSString stringWithFormat:@"%@/%@", kGameBundle, [_category.name lowercaseString]];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:categoryPath]) {
+        NSArray *contents = [fileManager contentsOfDirectoryAtPath:categoryPath error:nil];
+        NSArray *filteredContents = [contents filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(NSString *file, NSDictionary *bindings) {
+            BOOL match = NO;
+            if ([[file substringToIndex:2] isEqualToString:[_country.countryCode lowercaseString]]) {
+                match = YES;
+            }
+            
+            return match;
+        }]];
+        for (NSString *entity in filteredContents) {
+        }
+    }
+    
+    return @"NO";
 }
 
 @end
