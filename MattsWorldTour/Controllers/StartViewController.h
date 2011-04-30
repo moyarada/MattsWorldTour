@@ -11,6 +11,9 @@
 
 @interface StartViewController : UIViewController {
     
+    UIButton *startButton;
 }
-@property (retain) IBOutlet UIImageView *rotatingSunImage;
+@property (nonatomic, retain) IBOutlet UIImageView *rotatingSunImage;
+@property (nonatomic, retain) IBOutlet UIButton *startButton;
+- (IBAction)startAction:(id)sender;
 @end

@@ -302,6 +302,8 @@
 				5A7C7033136CC33600037781 /* BackgroundOverlay.png in Resources */,
 				5A7C7034136CC33600037781 /* Default-Landscape.png in Resources */,
 				29BE89A1136CB6BF000E0E31 /* Map-France.png in Resources */,
+				5A7C703F136CCCCA00037781 /* Start_btn_h.png in Resources */,
+				5A7C7040136CCCCA00037781 /* Start_btn_n.png in Resources */,
 				29BE89A7136CC544000E0E31 /* Matt-falling.png in Resources */,
 				29BE89A8136CC544000E0E31 /* Matt-landing-01.png in Resources */,
 				29BE89A9136CC544000E0E31 /* Matt-landing-02.png in Resources */,
