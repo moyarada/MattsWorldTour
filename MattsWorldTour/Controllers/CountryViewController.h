@@ -10,7 +10,7 @@
 
 @interface CountryViewController : UIViewController
 {
-    
+	UIImageView *mattView_;
 }
 
 @property (retain) NSArray *categories;
