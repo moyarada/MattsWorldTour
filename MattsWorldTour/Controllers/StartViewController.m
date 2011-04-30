@@ -13,6 +13,7 @@
 
 @implementation StartViewController
 @synthesize rotatingSunImage;
+@synthesize startButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,6 +26,7 @@
 
 - (void)dealloc
 {
+    [startButton release];
     [super dealloc];
 }
 
@@ -42,17 +44,27 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(startAnimations:) userInfo:nil repeats:NO];
+}
+
+- (void)startAnimations:(NSTimer *)sender
+{
     CABasicAnimation *fullRotation; 
     fullRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"]; 
     fullRotation.fromValue = [NSNumber numberWithFloat:0]; 
     fullRotation.toValue = [NSNumber numberWithFloat:(2*M_PI)]; 
     fullRotation.duration = 20.0; 
     fullRotation.repeatCount = 1e100f;
-    [self.rotatingSunImage.layer addAnimation:fullRotation forKey:@"jolly"]; 
+    [self.rotatingSunImage.layer addAnimation:fullRotation forKey:@"matt"];
+    
+    [UIView animateWithDuration:0.450 animations:^(void) {
+        startButton.frame = CGRectMake(409, 495, 206, 68);
+    }];
 }
 
 - (void)viewDidUnload
 {
+    [self setStartButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -64,4 +76,7 @@
 	return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
 
+- (IBAction)startAction:(id)sender {
+    [self dismissModalViewControllerAnimated:NO];
+}
 @end
