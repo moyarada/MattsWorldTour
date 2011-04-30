@@ -22,6 +22,8 @@
 		5A695CBF136B5D03008089AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A695CBE136B5D03008089AD /* RootViewController.m */; };
 		5A695CC2136B5D03008089AD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A695CC0136B5D03008089AD /* RootViewController.xib */; };
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
+		5AD2DBDD136C56BB002958E9 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2DBDB136C56BB002958E9 /* CountryViewController.m */; };
+		5AD2DBDE136C56BB002958E9 /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD2DBDC136C56BB002958E9 /* CountryViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		5A695CC1136B5D03008089AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
+		5AD2DBDA136C56BB002958E9 /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountryViewController.h; path = Controllers/CountryViewController.h; sourceTree = "<group>"; };
+		5AD2DBDB136C56BB002958E9 /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountryViewController.m; path = Controllers/CountryViewController.m; sourceTree = "<group>"; };
+		5AD2DBDC136C56BB002958E9 /* CountryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryViewController.xib; path = Controllers/CountryViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,8 @@
 			children = (
 				5A695CBD136B5D03008089AD /* RootViewController.h */,
 				5A695CBE136B5D03008089AD /* RootViewController.m */,
+				5AD2DBDA136C56BB002958E9 /* CountryViewController.h */,
+				5AD2DBDB136C56BB002958E9 /* CountryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 			children = (
 				5A695CBA136B5D03008089AD /* MainWindow.xib */,
 				5A695CC0136B5D03008089AD /* RootViewController.xib */,
+				5AD2DBDC136C56BB002958E9 /* CountryViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 				5A695CBC136B5D03008089AD /* MainWindow.xib in Resources */,
 				5A695CC2136B5D03008089AD /* RootViewController.xib in Resources */,
 				5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */,
+				5AD2DBDE136C56BB002958E9 /* CountryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +234,7 @@
 				5A1D363B136B75EA00AB0277 /* Category.m in Sources */,
 				5A1D363E136B75F900AB0277 /* Country.m in Sources */,
 				5AC91080136B7D37000F9FB3 /* Task.m in Sources */,
+				5AD2DBDD136C56BB002958E9 /* CountryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

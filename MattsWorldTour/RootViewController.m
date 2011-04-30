@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 
+#import "CountryViewController.h"
+
 @implementation RootViewController
 
 - (void)dealloc
@@ -15,23 +17,23 @@
     [super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)goToSpain
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+	CountryViewController *countryVC = [[CountryViewController alloc] init];
+	[self.navigationController pushViewController:countryVC animated:YES];
+	[countryVC release];
 }
 
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToSpain)];
+	[self.view addGestureRecognizer:tapGesture];
+	[tapGesture release];
 }
-*/
 
 - (void)viewDidUnload
 {
