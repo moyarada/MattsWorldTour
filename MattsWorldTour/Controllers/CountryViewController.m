@@ -56,12 +56,8 @@
 	
 	[super viewDidAppear:animated];
 	
-	// Animate him down (later we need to animate the images within the animating view as well).
-	[UIView animateWithDuration:1.2 animations:^(void) {
-		CGRect frame = [mattView_ frame];
-		frame.origin.y = [[self view] bounds].size.height - frame.size.height - 20; // Last number is bottom margin
-		[mattView_ setFrame:frame];
-	}];
+	// Schedule the drop of Matt.
+	[self performSelector:@selector (dropMatt) withObject:nil afterDelay:2];
 	
 }
 
@@ -75,6 +71,26 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
+}
+
+
+#pragma mark -
+
+- (void)dropMatt {
+	
+	// Drop down Matt (later we need to animate the images within the animating view as well).
+	
+	[UIView beginAnimations:@"MattFalling" context:NULL];
+	[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+	[UIView setAnimationDuration:0.4];
+	
+	// Calculate the new frame.
+	CGRect frame = [mattView_ frame];
+	frame.origin.y = [[self view] bounds].size.height - frame.size.height - 20; // Last number is bottom margin
+	[mattView_ setFrame:frame];
+	
+	[UIView commitAnimations];
+
 }
 
 @end
