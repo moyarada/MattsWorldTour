@@ -14,15 +14,16 @@
 
 @implementation GameManager
 
-@synthesize achievements, completedTasks;
+@synthesize achievements, tasks;
 
 - (void)completeTask:(Task *)task
 {
-    [self.completedTasks addObject:task];
+    [self.tasks addObject:task];
     
 	//Enumerate achievements -> validate
+    NSArray *completedTasks = [tasks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"completed == YES"]];
     [achievements enumerateObjectsUsingBlock:^(id achievement, NSUInteger idx, BOOL *stop) {
-//        [(Achievement *)achievement validateForCompletedCategories:self.completedCategories];
+        [(Achievement *)achievement validateForCompletedTasks:completedTasks];
     }];
 }
 

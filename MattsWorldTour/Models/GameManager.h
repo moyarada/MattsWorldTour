@@ -15,7 +15,7 @@
 }
 
 @property (retain) NSMutableArray *achievements;
-@property (retain) NSMutableArray *completedTasks;
+@property (retain) NSMutableArray *tasks;
 
 - (void)completeTask:(Task *)task;
 
