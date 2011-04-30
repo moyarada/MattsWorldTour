@@ -8,22 +8,20 @@
 
 #import "MattsWorldTourAppDelegate.h"
 
-#import "MattsWorldTourViewController.h"
 #import "GameManager.h"
 
 #import "Task.h"
 
 @implementation MattsWorldTourAppDelegate
 
-@synthesize window=_window;
-@synthesize viewController=_viewController;
+@synthesize gameManager;
+@synthesize window=_window, navigationController=_navigationController;;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	GameManager *gm = [[GameManager alloc] init];
-	[gm release];
+	self.gameManager = [[[GameManager alloc] init] autorelease];
 	 
-	self.window.rootViewController = self.viewController;
+	self.window.rootViewController = self.navigationController;
 	[self.window makeKeyAndVisible];
     return YES;
 }
@@ -70,7 +68,7 @@
 - (void)dealloc
 {
 	[_window release];
-	[_viewController release];
+	[_navigationController release];
     [super dealloc];
 }
 

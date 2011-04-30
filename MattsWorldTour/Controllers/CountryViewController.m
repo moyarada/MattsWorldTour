@@ -1,14 +1,23 @@
 //
-//  MattsWorldTourViewController.m
+//  CountryViewController.m
 //  MattsWorldTour
 //
-//  Created by Morten Gregersen on 4/29/11.
-//  Copyright 2011 CCDC. All rights reserved.
+//  Created by Morten Gregersen on 4/30/11.
+//  Copyright 2011 MoGee. All rights reserved.
 //
 
-#import "MattsWorldTourViewController.h"
+#import "CountryViewController.h"
 
-@implementation MattsWorldTourViewController
+@implementation CountryViewController
+
+- (id)init
+{
+    self = [super initWithNibName:@"CountryViewController" bundle:nil];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)dealloc
 {
@@ -25,13 +34,11 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -42,8 +49,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return YES;
+	return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
 
 @end

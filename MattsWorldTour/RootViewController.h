@@ -1,5 +1,5 @@
 //
-//  MattsWorldTourViewController.h
+//  RootViewController.h
 //  MattsWorldTour
 //
 //  Created by Morten Gregersen on 4/29/11.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MattsWorldTourViewController : UIViewController {
+@interface RootViewController : UIViewController
+{
     
 }
 
