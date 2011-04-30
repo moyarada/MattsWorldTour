@@ -3,18 +3,28 @@
 //  MattsWorldTour
 //
 //  Created by Morten Gregersen on 4/30/11.
-//  Copyright 2011 MoGee. All rights reserved.
+//  Copyright 2011 CCDC. All rights reserved.
 //
 
 #import "CountryViewController.h"
 
+#import "MattsWorldTourAppDelegate.h"
+#import "TaskViewController.h"
+#import "Country.h"
+#import "Category.h"
+
 @implementation CountryViewController
+
+@synthesize categories;
+@synthesize signView, category1Button, category2Button, category3Button, category4Button;
 
 - (id)init
 {
     self = [super initWithNibName:@"CountryViewController" bundle:nil];
-    if (self) {
-        
+    if (self)
+	{
+		GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
+		self.categories = [gm categoriesForSelectedCountry];
     }
     return self;
 }
@@ -25,29 +35,34 @@
 	[super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)chooseCategory:(UIButton *)sender
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+	[UIView animateWithDuration:0.75 animations:^{
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
+		
+		TaskViewController *taskVC = [[TaskViewController alloc] initWithCategory:[self.categories objectAtIndex:sender.tag]];
+		self.signView = taskVC.view;
+		[taskVC release];
+	}];
 }
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view from its nib.
+    [super viewDidLoad];
 	
+	self.category1Button.titleLabel.text = ((Category *)[self.categories objectAtIndex:self.category1Button.tag]).name;
+	self.category2Button.titleLabel.text = ((Category *)[self.categories objectAtIndex:self.category2Button.tag]).name;
+	self.category3Button.titleLabel.text = ((Category *)[self.categories objectAtIndex:self.category3Button.tag]).name;
+	self.category4Button.titleLabel.text = ((Category *)[self.categories objectAtIndex:self.category4Button.tag]).name;
+
 	// Add the Matt subview offscreen, ready to fall down.
 	mattView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Matt-falling.png"]];
 	CGRect frame = [mattView_ bounds];
 	frame.origin = CGPointMake (24, -frame.size.height);
 	[mattView_ setFrame:frame];
-	
 	[[self view] addSubview:mattView_];
-	
 }
 
 - (void)viewDidAppear:(BOOL)animated {

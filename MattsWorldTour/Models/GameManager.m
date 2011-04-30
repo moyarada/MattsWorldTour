@@ -22,7 +22,7 @@
 	if (self)
 	{
 		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Countries" ofType:@"plist"]];
-		NSMutableArray *countriesArray = [NSMutableArray array];
+		NSMutableArray *countriesArray = [[NSMutableArray alloc] init];
 		[countriesTemp enumerateObjectsUsingBlock:^(NSDictionary *countryInfo, NSUInteger index, BOOL *stop) {
 			NSMutableArray *categoriesArray = [NSMutableArray array];
 			Country *newCountry = [Country countryWithDictionary:countryInfo];
@@ -42,22 +42,27 @@
 {
     [_tasks addObject:task];
     
-	//Enumerate achievements -> validate
     NSArray *completedTasks = [_tasks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"completed == YES"]];
-    [_achievements enumerateObjectsUsingBlock:^(Achievement *achievement, NSUInteger idx, BOOL *stop) {
+    [_achievements enumerateObjectsUsingBlock:^(Achievement *achievement, NSUInteger index, BOOL *stop) {
         [achievement validateForCompletedTasks:completedTasks];
     }];
 }
 
 - (CGRect)rectForCountryAtPoint:(CGPoint)point
 {
+	[countries enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
+		Country *country = (Country *)obj;
+		if ([country.countryCode isEqualToString:@"FR"])
+		{
+			self.selectedCountry = country;
+		}
+	}];
     CGRect baguette = CGRectMake(0, 0, 0, 0);
     return baguette;
 }
 
 - (NSArray *)categoriesForSelectedCountry
 {
-    // Skub
     return _selectedCountry.categories;
 }
 
