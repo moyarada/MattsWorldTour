@@ -16,6 +16,27 @@
 
 @synthesize achievements=_achievements, tasks=_tasks, selectedCountry=_selectedCountry, selectedCategory=_selectedCategory;
 
+- (id)init
+{
+	self = [super init];
+	if (self)
+	{
+		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:@"Countries.plist"];
+		NSMutableArray *countriesArray = [NSMutableArray array];
+		[countriesTemp enumerateObjectsUsingBlock:^(NSDictionary *countryInfo, NSUInteger index, BOOL *stop) {
+			NSMutableArray *categoriesArray = [NSMutableArray array];
+			Country *newCountry = [Country countryWithDictionary:countryInfo];
+			[newCountry.categories enumerateObjectsUsingBlock:^(NSString *categoryTypeString, NSUInteger index, BOOL *stop) {
+				Category *newCategory = [Category categoryWithType:categoryTypeString];
+				[categoriesArray addObject:newCategory];
+			}];
+			newCountry.categories = categoriesArray;
+			[countriesArray addObject:newCountry];
+		}];
+	}
+	return self;
+}
+
 - (void)completeTask:(Task *)task
 {
     [_tasks addObject:task];

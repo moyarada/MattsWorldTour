@@ -11,9 +11,10 @@
 @class Task;
 @class Country;
 @class Category;
+
 @interface GameManager : NSObject
 {
-	
+	NSArray *countries;
 }
 
 @property (retain) NSMutableArray *achievements;
