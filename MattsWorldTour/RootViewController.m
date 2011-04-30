@@ -37,7 +37,7 @@
 		// Zoom to Europe map.
 		
 		// First add new Europe map underneath the world current map view.
-		UIImageView *europeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CardZoom2.png"]];
+		UIImageView *europeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map-Europe.png"]];
 		[[self view] insertSubview:europeView atIndex:0]; // All the way in the back
 		
 		// Calculate center and scale for the world view so that it zooms to a position and size that exactly matches the Europe view.
@@ -57,7 +57,7 @@
 				[mapView_ removeFromSuperview];
 				[self setMapView:europeView];
 				// Set the new zoom level.
-				zoomLevel_ = eMapZoomLevelCountry; //eMapZoomLevelContinent;
+				zoomLevel_ = eMapZoomLevelCountry; // eMapZoomLevelContinent;
 				isZooming_ = NO;
 			}];
 		}];
@@ -67,7 +67,31 @@
 		
 		// Zoom to France.
 		
+		// First add new Europe map underneath the world current map view.
+		UIImageView *franceView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map-France.png"]];
+		[[self view] insertSubview:franceView atIndex:0]; // All the way in the back
 		
+		// Calculate center and scale for the world view so that it zooms to a position and size that exactly matches the Europe view.
+		CGPoint center = CGPointMake (890, 1594);
+		CGAffineTransform scaleTransform = CGAffineTransformScale (CGAffineTransformIdentity, 5.22f, 5.22f);
+		
+		// Animate.
+		[UIView animateWithDuration:0.7 animations:^(void) {
+			[mapView_ setCenter:center];
+			[mapView_ setTransform:scaleTransform];
+		}
+		completion:^(BOOL finished) {
+			// Fade out enlarged world map, slowly revealing the fullres Europe map.
+			[UIView animateWithDuration:0.3 animations:^(void) {
+				[mapView_ setAlpha:0];
+			} completion:^(BOOL finished) {
+				[mapView_ removeFromSuperview];
+				[self setMapView:franceView];
+				// Set the new zoom level.
+				zoomLevel_ = eMapZoomLevelCountry;
+				isZooming_ = NO;
+			}];
+		}];
 	}
 	
 	else if (zoomLevel_ == eMapZoomLevelCountry) {
