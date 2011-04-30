@@ -19,5 +19,5 @@
 @property (assign) NSTimeInterval duration;
 
 - (BOOL)meetsRequirementTask:(Task*)task;
-
+- (NSString *)filePathForTaskResource;
 @end
