@@ -20,9 +20,10 @@
 		5A695CB6136B5D03008089AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A695CB5136B5D03008089AD /* main.m */; };
 		5A695CB9136B5D03008089AD /* MattsWorldTourAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A695CB8136B5D03008089AD /* MattsWorldTourAppDelegate.m */; };
 		5A695CBC136B5D03008089AD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A695CBA136B5D03008089AD /* MainWindow.xib */; };
-		5A695CBF136B5D03008089AD /* MattsWorldTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */; };
-		5A695CC2136B5D03008089AD /* MattsWorldTourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */; };
 		5A9C5780136C8886003FF725 /* Achievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C577F136C8886003FF725 /* Achievements.plist */; };
+		5A9C5791136C8B1F003FF725 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5790136C8B1F003FF725 /* RootViewController.m */; };
+		5A9C5794136C8B2A003FF725 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5793136C8B2A003FF725 /* CountryViewController.m */; };
+		5A9C5796136C8B36003FF725 /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C5795136C8B36003FF725 /* CountryViewController.xib */; };
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
 /* End PBXBuildFile section */
 
@@ -48,10 +49,12 @@
 		5A695CB7136B5D03008089AD /* MattsWorldTourAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MattsWorldTourAppDelegate.h; sourceTree = "<group>"; };
 		5A695CB8136B5D03008089AD /* MattsWorldTourAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MattsWorldTourAppDelegate.m; sourceTree = "<group>"; };
 		5A695CBB136B5D03008089AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		5A695CBD136B5D03008089AD /* MattsWorldTourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MattsWorldTourViewController.h; sourceTree = "<group>"; };
-		5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MattsWorldTourViewController.m; sourceTree = "<group>"; };
-		5A695CC1136B5D03008089AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MattsWorldTourViewController.xib; sourceTree = "<group>"; };
 		5A9C577F136C8886003FF725 /* Achievements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Achievements.plist; sourceTree = "<group>"; };
+		5A9C578F136C8B1F003FF725 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5A9C5790136C8B1F003FF725 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5A9C5792136C8B2A003FF725 /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountryViewController.h; path = Controllers/CountryViewController.h; sourceTree = "<group>"; };
+		5A9C5793136C8B2A003FF725 /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountryViewController.m; path = Controllers/CountryViewController.m; sourceTree = "<group>"; };
+		5A9C5795136C8B36003FF725 /* CountryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryViewController.xib; path = Controllers/CountryViewController.xib; sourceTree = "<group>"; };
 		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,8 +93,10 @@
 		5A1D3631136B71C700AB0277 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5A695CBD136B5D03008089AD /* MattsWorldTourViewController.h */,
-				5A695CBE136B5D03008089AD /* MattsWorldTourViewController.m */,
+				5A9C5792136C8B2A003FF725 /* CountryViewController.h */,
+				5A9C5793136C8B2A003FF725 /* CountryViewController.m */,
+				5A9C578F136C8B1F003FF725 /* RootViewController.h */,
+				5A9C5790136C8B1F003FF725 /* RootViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -100,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5A695CBA136B5D03008089AD /* MainWindow.xib */,
-				5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */,
+				5A9C5795136C8B36003FF725 /* CountryViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -219,10 +224,10 @@
 			files = (
 				5A695CB3136B5D03008089AD /* InfoPlist.strings in Resources */,
 				5A695CBC136B5D03008089AD /* MainWindow.xib in Resources */,
-				5A695CC2136B5D03008089AD /* MattsWorldTourViewController.xib in Resources */,
 				5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */,
 				5A677706136C51B000AA1A49 /* game.bundle in Resources */,
 				5A9C5780136C8886003FF725 /* Achievements.plist in Resources */,
+				5A9C5796136C8B36003FF725 /* CountryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,12 +240,13 @@
 			files = (
 				5A695CB6136B5D03008089AD /* main.m in Sources */,
 				5A695CB9136B5D03008089AD /* MattsWorldTourAppDelegate.m in Sources */,
-				5A695CBF136B5D03008089AD /* MattsWorldTourViewController.m in Sources */,
 				5A1D3635136B724800AB0277 /* Achievement.m in Sources */,
 				5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */,
 				5A1D363B136B75EA00AB0277 /* Category.m in Sources */,
 				5A1D363E136B75F900AB0277 /* Country.m in Sources */,
 				5AC91080136B7D37000F9FB3 /* Task.m in Sources */,
+				5A9C5791136C8B1F003FF725 /* RootViewController.m in Sources */,
+				5A9C5794136C8B2A003FF725 /* CountryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,14 +267,6 @@
 				5A695CBB136B5D03008089AD /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		5A695CC0136B5D03008089AD /* MattsWorldTourViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A695CC1136B5D03008089AD /* en */,
-			);
-			name = MattsWorldTourViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
