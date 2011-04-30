@@ -3,8 +3,6 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>type</key>
-		<string></string>
 		<key>name</key>
 		<string></string>
 		<key>requirements</key>
@@ -12,8 +10,14 @@
 			<dict>
 				<key>country</key>
 				<string></string>
+				<key>category</key>
+				<string></string>
+				<key>New item</key>
+				<string></string>
 			</dict>
 		</array>
+		<key>type</key>
+		<string></string>
 	</dict>
 </array>
 </plist>
