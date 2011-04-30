@@ -3,7 +3,7 @@
 //  MattsWorldTour
 //
 //  Created by Morten Bøgh on 4/30/11.
-//  Copyright 2011 MoGee. All rights reserved.
+//  Copyright 2011 CCDC. All rights reserved.
 //
 
 #import "Task.h"

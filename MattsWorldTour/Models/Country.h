@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface Country : NSObject
-{
-    
-}
+
+@property (copy) NSString *countryCode;
+@property (copy) NSString *countryName;
+@property (retain) NSArray *categories;
+
++ (Country *)countryWithDictionary:(NSDictionary *)countryInfo;
 
 @end
