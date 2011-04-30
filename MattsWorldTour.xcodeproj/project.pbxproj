@@ -227,6 +227,7 @@
 				5A695CC2136B5D03008089AD /* RootViewController.xib in Resources */,
 				5A1D3654136C1CC100AB0277 /* Countries.plist in Resources */,
 				5AD2DBDE136C56BB002958E9 /* CountryViewController.xib in Resources */,
+				5A677706136C51B000AA1A49 /* game.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
