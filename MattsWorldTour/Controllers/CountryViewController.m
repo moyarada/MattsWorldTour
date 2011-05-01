@@ -90,6 +90,12 @@
 	frame.origin = CGPointMake (-90, -frame.size.height);
 	[mattView_ setFrame:frame];
 	[[self view] addSubview:mattView_];
+	
+	// Add temporary dance button.
+	UIButton *danceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[danceButton setFrame:CGRectMake (920, 700, 80, 44)];
+	[danceButton addTarget:self action:@selector (danceMatt) forControlEvents:UIControlEventTouchUpInside];
+	[[self view] addSubview:danceButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -151,6 +157,15 @@
 	[mattView_ setAnimationDuration:0.2];
 	[mattView_ setAnimationRepeatCount:1];
 	[mattView_ startAnimating];
+}
+
+- (void)danceMatt {
+	// Make Matt dance.
+	[mattView_ setAnimationImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"Matt-dance-01.png"], [UIImage imageNamed:@"Matt-dance-02.png"], [UIImage imageNamed:@"Matt-dance-03.png"], [UIImage imageNamed:@"Matt-dance-04.png"], [UIImage imageNamed:@"Matt-dance-05.png"], [UIImage imageNamed:@"Matt-dance-06.png"], [UIImage imageNamed:@"Matt-dance-07.png"], [UIImage imageNamed:@"Matt-dance-08.png"], nil]];
+	[mattView_ setAnimationDuration:1];
+	[mattView_ setAnimationRepeatCount:1];
+	[mattView_ startAnimating];
+	
 }
 
 @end
