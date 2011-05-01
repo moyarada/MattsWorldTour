@@ -8,6 +8,8 @@
 
 #import "TaskViewController.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 #import "MattsWorldTourAppDelegate.h"
 #import "Country.h"
 #import "Category.h"
@@ -15,7 +17,7 @@
 
 @implementation TaskViewController
 
-@synthesize category, tasks, parent;
+@synthesize category, tasks, parent, player;
 @synthesize categoryImageView, categoryNameLabel, answer1view, answer2view, answer3view;
 
 - (id)initWithCategory:(Category *)nCategory
@@ -26,8 +28,16 @@
 		self.category = nCategory;
 		MattsWorldTourAppDelegate *appDelegate = (MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate];
 		self.tasks = [appDelegate.gameManager answersForCategory:self.category];
+		
+		self.player = nil;
+		playingSound = -1;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [super dealloc];
 }
 
 - (IBAction)chooseAnswer:(UIButton *)sender
@@ -47,9 +57,39 @@
 	[self.parent flipSignToCategoriesList];
 }
 
-- (void)dealloc
+- (NSString *)fullPathForAsset:(NSString *)assetName
 {
-    [super dealloc];
+	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, assetName];
+}
+
+- (void)startPlayingAudio:(UIButton *)sender
+{
+	if (self.player != nil && sender.tag == playingSound)
+	{
+		if ([self.player isPlaying])
+		{
+			[self.player pause];
+			[sender setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		}
+		else
+		{
+			[self.player play];
+			[sender setImage:[UIImage imageNamed:@"Sound_Plause.png"] forState:UIControlStateNormal];
+		}
+	}
+	else
+	{
+		[self.answer1view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer2view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer3view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		
+		NSString *assetPath = [(Task *)[tasks objectAtIndex:sender.tag] filePathForTaskResource];
+		NSURL *url = [NSURL fileURLWithPath:[self fullPathForAsset:assetPath]];
+		self.player = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] autorelease];
+		[player play];
+		playingSound = sender.tag;
+		[sender setImage:[UIImage imageNamed:@"Sound_Plause.png"] forState:UIControlStateNormal];
+	}
 }
 
 #pragma mark - View lifecycle
@@ -105,25 +145,23 @@
 	if (self.category.type == CategoryTypeFood || self.category.type == CategoryTypeFlag)
 	{
 		NSString *answer1path = [(Task *)[tasks objectAtIndex:self.answer1view.tag] filePathForTaskResource];
-		self.answer1view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer1path]];
+		[self.answer1view setImage:[UIImage imageWithContentsOfFile:[self fullPathForAsset:answer1path]] forState:UIControlStateNormal];
 		
 		NSString *answer2path = [(Task *)[tasks objectAtIndex:self.answer2view.tag] filePathForTaskResource];
-		self.answer2view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer2path]];
+		[self.answer2view setImage:[UIImage imageWithContentsOfFile:[self fullPathForAsset:answer2path]] forState:UIControlStateNormal];
 		
 		NSString *answer3path = [(Task *)[tasks objectAtIndex:self.answer3view.tag] filePathForTaskResource];
-		self.answer3view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer3path]];
+		[self.answer3view setImage:[UIImage imageWithContentsOfFile:[self fullPathForAsset:answer3path]] forState:UIControlStateNormal];
 	}
 	else if (self.category.type == CategoryTypeAnthem || self.category.type == CategoryTypeWordsSpoken)
 	{
-		self.answer1view.image = [UIImage imageNamed:@"Sound_Play.png"];		
-		self.answer2view.image = [UIImage imageNamed:@"Sound_Play.png"];
-		self.answer3view.image = [UIImage imageNamed:@"Sound_Play.png"];
+		[self.answer1view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer1view addTarget:self action:@selector(startPlayingAudio:) forControlEvents:UIControlEventTouchUpInside];
+		[self.answer2view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer2view addTarget:self action:@selector(startPlayingAudio:) forControlEvents:UIControlEventTouchUpInside];
+		[self.answer3view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer3view addTarget:self action:@selector(startPlayingAudio:) forControlEvents:UIControlEventTouchUpInside];
 	}
-}
-								  
-- (NSString *)fullPathForImage:(NSString *)imageName
-{
-	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, imageName];
 }
 
 - (void)viewDidUnload

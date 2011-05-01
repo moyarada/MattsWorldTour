@@ -13,23 +13,24 @@
 
 @interface TaskViewController : UIViewController
 {
-	
+	int playingSound;
 }
 
 @property (retain) Category *category;
 @property (retain) NSArray *tasks;
 @property (retain) CountryViewController *parent;
+@property (retain) AVAudioPlayer *player;
 
 @property (nonatomic, retain) IBOutlet UIImageView *categoryImageView;
 @property (nonatomic, retain) IBOutlet UILabel *categoryNameLabel;
-@property (nonatomic, retain) IBOutlet UIImageView *answer1view;
-@property (nonatomic, retain) IBOutlet UIImageView *answer2view;
-@property (nonatomic, retain) IBOutlet UIImageView *answer3view;
+@property (nonatomic, retain) IBOutlet UIButton *answer1view;
+@property (nonatomic, retain) IBOutlet UIButton *answer2view;
+@property (nonatomic, retain) IBOutlet UIButton *answer3view;
 
 - (id)initWithCategory:(Category *)nCategory;
 
 - (IBAction)chooseAnswer:(UIButton *)sender;
 
-- (NSString *)fullPathForImage:(NSString *)imageName;
+- (NSString *)fullPathForAsset:(NSString *)assetName;
 
 @end
