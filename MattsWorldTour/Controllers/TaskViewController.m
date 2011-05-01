@@ -9,6 +9,7 @@
 #import "TaskViewController.h"
 
 #import "MattsWorldTourAppDelegate.h"
+#import "Country.h"
 #import "Category.h"
 #import "Task.h"
 
@@ -31,6 +32,18 @@
 
 - (IBAction)chooseAnswer:(UIButton *)sender
 {
+	MattsWorldTourAppDelegate *appDelegate = (MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate];
+	Task *chosenTask = (Task *)[self.tasks objectAtIndex:sender.tag];
+	if ([chosenTask.country isEqual:appDelegate.gameManager.selectedCountry])
+	{
+		chosenTask.completed = YES;
+	}
+	else
+	{
+		chosenTask.completed = NO;
+	}
+	[appDelegate.gameManager completeTask:chosenTask];
+	
 	[self.parent flipSignToCategoriesList];
 }
 
@@ -67,18 +80,50 @@
 	
 	self.categoryNameLabel.text = self.category.name;
 	
-	NSLog(@"Task 1: %@", [(Task *)[self.tasks objectAtIndex:0] filePathForTaskResource]);
-	NSLog(@"Task 2: %@", [(Task *)[self.tasks objectAtIndex:1] filePathForTaskResource]);
-	NSLog(@"Task 3: %@", [(Task *)[self.tasks objectAtIndex:2] filePathForTaskResource]);
+	self.answer1view.tag = arc4random() % [self.tasks count];
+	BOOL answer2viewTagged = NO;
+	while (!answer2viewTagged)
+	{
+		NSUInteger answer2tag = arc4random() % [self.tasks count];
+		if (self.answer1view.tag != answer2tag)
+		{
+			self.answer2view.tag = answer2tag;
+			answer2viewTagged = YES;
+		}
+	}
+	BOOL answer3viewTagged = NO;
+	while (!answer3viewTagged)
+	{
+		NSUInteger answer3tag = arc4random() % [self.tasks count];
+		if (self.answer1view.tag != answer3tag && self.answer2view.tag != answer3tag)
+		{
+			self.answer3view.tag = answer3tag;
+			answer3viewTagged = YES;
+		}
+	}
 	
 	if (self.category.type == CategoryTypeFood || self.category.type == CategoryTypeFlag)
 	{
+		NSString *answer1path = [(Task *)[tasks objectAtIndex:self.answer1view.tag] filePathForTaskResource];
+		self.answer1view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer1path]];
 		
+		NSString *answer2path = [(Task *)[tasks objectAtIndex:self.answer2view.tag] filePathForTaskResource];
+		self.answer2view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer2path]];
+		
+		NSString *answer3path = [(Task *)[tasks objectAtIndex:self.answer3view.tag] filePathForTaskResource];
+		self.answer3view.image = [UIImage imageWithContentsOfFile:[self fullPathForImage:answer3path]];
 	}
 	else if (self.category.type == CategoryTypeAnthem || self.category.type == CategoryTypeWordsSpoken)
 	{
-		
+		self.answer1view.image = [UIImage imageNamed:@"Sound_Play.png"];		
+		self.answer2view.image = [UIImage imageNamed:@"Sound_Play.png"];
+		self.answer3view.image = [UIImage imageNamed:@"Sound_Play.png"];
 	}
+}
+								  
+- (NSString *)fullPathForImage:(NSString *)imageName
+{
+	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, imageName];
 }
 
 - (void)viewDidUnload

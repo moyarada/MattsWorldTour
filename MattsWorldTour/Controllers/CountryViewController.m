@@ -25,6 +25,8 @@
 	{
 		GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
 		self.categories = [gm categoriesForSelectedCountry];
+		
+		NSLog(@"CompletedTasks: %@", gm.tasks);
     }
     return self;
 }
@@ -64,6 +66,9 @@
 		[[[self.signView subviews] objectAtIndex:0] removeFromSuperview];
 		[self.signView addSubview:self.categoriesListView];
 	}];
+	
+	GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
+	NSLog(@"CompletedTasks: %@", gm.tasks);
 }
 
 #pragma mark - View lifecycle

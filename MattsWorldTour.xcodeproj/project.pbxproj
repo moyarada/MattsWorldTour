@@ -16,6 +16,8 @@
 		29BE89A9136CC544000E0E31 /* Matt-landing-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A4136CC544000E0E31 /* Matt-landing-02.png */; };
 		29BE89AA136CC544000E0E31 /* Matt-landing-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A5136CC544000E0E31 /* Matt-landing-03.png */; };
 		29BE89AB136CC544000E0E31 /* Matt-landing-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A6136CC544000E0E31 /* Matt-landing-04.png */; };
+		5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A5136D69600020E33F /* Sound_Plause.png */; };
+		5A1408A8136D69600020E33F /* Sound_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A6136D69600020E33F /* Sound_Play.png */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -57,6 +59,8 @@
 		29BE89A4136CC544000E0E31 /* Matt-landing-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-02.png"; sourceTree = "<group>"; };
 		29BE89A5136CC544000E0E31 /* Matt-landing-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-03.png"; sourceTree = "<group>"; };
 		29BE89A6136CC544000E0E31 /* Matt-landing-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-04.png"; sourceTree = "<group>"; };
+		5A1408A5136D69600020E33F /* Sound_Plause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Plause.png; sourceTree = "<group>"; };
+		5A1408A6136D69600020E33F /* Sound_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Play.png; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A1408A5136D69600020E33F /* Sound_Plause.png */,
+				5A1408A6136D69600020E33F /* Sound_Play.png */,
 				5AAE02AC136CCECC00E8079D /* Icon-72.png */,
 				5A7C703D136CCCCA00037781 /* Start_btn_h.png */,
 				5A7C703E136CCCCA00037781 /* Start_btn_n.png */,
@@ -312,6 +318,8 @@
 				29BE89AA136CC544000E0E31 /* Matt-landing-03.png in Resources */,
 				29BE89AB136CC544000E0E31 /* Matt-landing-04.png in Resources */,
 				5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */,
+				5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */,
+				5A1408A8136D69600020E33F /* Sound_Play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
