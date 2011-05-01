@@ -24,8 +24,6 @@
 		29BE89DD136D7BBE000E0E31 /* Matt-dance-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */; };
 		29BE89DE136D7BBE000E0E31 /* Matt-dance-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */; };
 		29BE89DF136D7BBE000E0E31 /* Matt-dance-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */; };
-		5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A5136D69600020E33F /* Sound_Plause.png */; };
-		5A1408A8136D69600020E33F /* Sound_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A6136D69600020E33F /* Sound_Play.png */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -89,8 +87,6 @@
 		29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-06.png"; sourceTree = "<group>"; };
 		29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-07.png"; sourceTree = "<group>"; };
 		29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-08.png"; sourceTree = "<group>"; };
-		5A1408A5136D69600020E33F /* Sound_Plause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Plause.png; sourceTree = "<group>"; };
-		5A1408A6136D69600020E33F /* Sound_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Play.png; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
