@@ -33,4 +33,7 @@
 - (void)flipSignToTasksForCategory:(Category *)category;
 - (void)flipSignToCategoriesList;
 
+- (void)dropMatt;
+- (void)danceMatt;
+
 @end

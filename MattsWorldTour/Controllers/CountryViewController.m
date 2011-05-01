@@ -12,6 +12,7 @@
 #import "TaskViewController.h"
 #import "Country.h"
 #import "Category.h"
+#import "Task.h"
 
 #import <AudioToolbox/AudioToolbox.h>
 
@@ -70,7 +71,19 @@
 	}];
 	
 	GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
-	NSLog(@"CompletedTasks: %@", gm.tasks);
+//	NSLog(@"CompletedTasks: %@", gm.tasks);
+	__block int counter = 0;
+	[gm.tasks enumerateObjectsUsingBlock:^(Task *task, NSUInteger idx, BOOL *stop)
+	{
+		if ([task.country isEqual:gm.selectedCountry])
+		{
+			counter++;
+		}
+	}];
+	if (counter == 4)
+	{
+		[self danceMatt];
+	}
 }
 
 #pragma mark - View lifecycle
