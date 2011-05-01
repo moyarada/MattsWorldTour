@@ -30,6 +30,11 @@
     return self;
 }
 
+- (void)dealloc
+{
+    [super dealloc];
+}
+
 - (IBAction)chooseAnswer:(UIButton *)sender
 {
 	MattsWorldTourAppDelegate *appDelegate = (MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -47,9 +52,14 @@
 	[self.parent flipSignToCategoriesList];
 }
 
-- (void)dealloc
+- (NSString *)fullPathForImage:(NSString *)imageName
 {
-    [super dealloc];
+	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, imageName];
+}
+
+- (void)startPlayingAudio:(UIImageView *)sender
+{
+	
 }
 
 #pragma mark - View lifecycle
@@ -119,11 +129,6 @@
 		self.answer2view.image = [UIImage imageNamed:@"Sound_Play.png"];
 		self.answer3view.image = [UIImage imageNamed:@"Sound_Play.png"];
 	}
-}
-								  
-- (NSString *)fullPathForImage:(NSString *)imageName
-{
-	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, imageName];
 }
 
 - (void)viewDidUnload
