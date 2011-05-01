@@ -38,7 +38,7 @@
 		// Zoom to Europe map.
 		
 		// First add new Europe map underneath the world current map view.
-		UIImageView *europeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map-Europe.png"]];
+		UIImageView *europeView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Map-Europe-Matt.png"]];
 		[[self view] insertSubview:europeView atIndex:0]; // All the way in the back
 		
 		// Calculate center and scale for the world view so that it zooms to a position and size that exactly matches the Europe view.

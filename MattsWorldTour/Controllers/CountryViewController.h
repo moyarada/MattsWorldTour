@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class AVAudioPlayer;
 @class TaskViewController;
 @class Category;
 
 @interface CountryViewController : UIViewController
 {
 	UIImageView *mattView_;
+    AVAudioPlayer *ap;
 }
 
 @property (retain) NSArray *categories;

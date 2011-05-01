@@ -13,6 +13,8 @@
 #import "Country.h"
 #import "Category.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 @implementation CountryViewController
 
 @synthesize categories, taskVC;
@@ -85,7 +87,7 @@
 	// Add the Matt subview offscreen, ready to fall down.
 	mattView_ = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Matt-falling.png"]];
 	CGRect frame = [mattView_ bounds];
-	frame.origin = CGPointMake (24, -frame.size.height);
+	frame.origin = CGPointMake (-90, -frame.size.height);
 	[mattView_ setFrame:frame];
 	[[self view] addSubview:mattView_];
 }
@@ -98,7 +100,6 @@
 	
 	// Schedule the drop of Matt.
 	[self performSelector:@selector (dropMatt) withObject:nil afterDelay:2];
-	
 }
 
 - (void)viewDidUnload
@@ -116,9 +117,19 @@
 #pragma mark -
 
 - (void)dropMatt {
-	
+    // Play scream
+    SystemSoundID soundID;
+    
+	//Get a URL for the sound file
+	NSURL *filePath = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scream" ofType:@"caf"]];
+    
+	//Use audio sevices to create the sound
+	AudioServicesCreateSystemSoundID((CFURLRef)filePath, &soundID);
+    
+	//Use audio services to play the sound
+	AudioServicesPlaySystemSound(soundID);
+    
 	// Drop down Matt (later we need to animate the images within the animating view as well).
-	
 	[UIView beginAnimations:@"MattFalling" context:NULL];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
 	[UIView setAnimationDuration:0.3];
@@ -131,7 +142,6 @@
 	[mattView_ setFrame:frame];
 	
 	[UIView commitAnimations];
-
 }
 
 - (void)didDropMatt:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {

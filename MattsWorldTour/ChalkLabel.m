@@ -11,6 +11,17 @@
 
 @implementation ChalkLabel
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setFont:[UIFont fontWithName:@"Chalkduster" size:30.0]];
+        [self setTextColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
+    }
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

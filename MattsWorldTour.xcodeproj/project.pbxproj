@@ -42,6 +42,13 @@
 		5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C704B136D4E6100037781 /* Chalkduster.ttf */; };
 		5A7C70CE136D507900037781 /* ChalkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C70CD136D507900037781 /* ChalkLabel.m */; };
 		5A7C70D1136D518000037781 /* ChalkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C70D0136D518000037781 /* ChalkButton.m */; };
+		5A7C70D8136D68FE00037781 /* scream.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C70D7136D68FE00037781 /* scream.caf */; };
+		5A7C70DA136D6AA500037781 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7C70D9136D6AA500037781 /* AudioToolbox.framework */; };
+		5A7C70DC136D6E4200037781 /* MapHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C70DB136D6E4200037781 /* MapHead.png */; };
+		5A7C70DF136D6F2800037781 /* Map-Europe-Matt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C70DD136D6F2800037781 /* Map-Europe-Matt.png */; };
+		5A7C70E0136D6F2800037781 /* Map-World-Matt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C70DE136D6F2800037781 /* Map-World-Matt.png */; };
+		5A7C70E2136D719C00037781 /* FranceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C70E1136D719C00037781 /* FranceBackground.png */; };
+		5A7C70E6136D721100037781 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7C70E5136D721100037781 /* AVFoundation.framework */; };
 		5A9C5780136C8886003FF725 /* Achievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C577F136C8886003FF725 /* Achievements.plist */; };
 		5A9C5791136C8B1F003FF725 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5790136C8B1F003FF725 /* RootViewController.m */; };
 		5A9C5794136C8B2A003FF725 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5793136C8B2A003FF725 /* CountryViewController.m */; };
@@ -99,6 +106,13 @@
 		5A7C70CD136D507900037781 /* ChalkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChalkLabel.m; sourceTree = "<group>"; };
 		5A7C70CF136D518000037781 /* ChalkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChalkButton.h; sourceTree = "<group>"; };
 		5A7C70D0136D518000037781 /* ChalkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChalkButton.m; sourceTree = "<group>"; };
+		5A7C70D7136D68FE00037781 /* scream.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = scream.caf; sourceTree = "<group>"; };
+		5A7C70D9136D6AA500037781 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5A7C70DB136D6E4200037781 /* MapHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapHead.png; sourceTree = "<group>"; };
+		5A7C70DD136D6F2800037781 /* Map-Europe-Matt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-Europe-Matt.png"; sourceTree = "<group>"; };
+		5A7C70DE136D6F2800037781 /* Map-World-Matt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-World-Matt.png"; sourceTree = "<group>"; };
+		5A7C70E1136D719C00037781 /* FranceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FranceBackground.png; sourceTree = "<group>"; };
+		5A7C70E5136D721100037781 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5A9C577F136C8886003FF725 /* Achievements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Achievements.plist; sourceTree = "<group>"; };
 		5A9C578F136C8B1F003FF725 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5A9C5790136C8B1F003FF725 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -118,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7C70E6136D721100037781 /* AVFoundation.framework in Frameworks */,
+				5A7C70DA136D6AA500037781 /* AudioToolbox.framework in Frameworks */,
 				5A7C702C136CBCFB00037781 /* QuartzCore.framework in Frameworks */,
 				5A695CA9136B5D03008089AD /* UIKit.framework in Frameworks */,
 				5A695CAB136B5D03008089AD /* Foundation.framework in Frameworks */,
@@ -177,6 +193,11 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C70E1136D719C00037781 /* FranceBackground.png */,
+				5A7C70DD136D6F2800037781 /* Map-Europe-Matt.png */,
+				5A7C70DE136D6F2800037781 /* Map-World-Matt.png */,
+				5A7C70DB136D6E4200037781 /* MapHead.png */,
+				5A7C70D7136D68FE00037781 /* scream.caf */,
 				5A1408A5136D69600020E33F /* Sound_Plause.png */,
 				5A1408A6136D69600020E33F /* Sound_Play.png */,
 				5AAE02AC136CCECC00E8079D /* Icon-72.png */,
@@ -219,6 +240,8 @@
 		5A695CA7136B5D03008089AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C70E5136D721100037781 /* AVFoundation.framework */,
+				5A7C70D9136D6AA500037781 /* AudioToolbox.framework */,
 				5A7C702B136CBCFB00037781 /* QuartzCore.framework */,
 				5A695CA8136B5D03008089AD /* UIKit.framework */,
 				5A695CAA136B5D03008089AD /* Foundation.framework */,
@@ -342,6 +365,11 @@
 				5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */,
 				5A1408A8136D69600020E33F /* Sound_Play.png in Resources */,
 				5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */,
+				5A7C70D8136D68FE00037781 /* scream.caf in Resources */,
+				5A7C70DC136D6E4200037781 /* MapHead.png in Resources */,
+				5A7C70DF136D6F2800037781 /* Map-Europe-Matt.png in Resources */,
+				5A7C70E0136D6F2800037781 /* Map-World-Matt.png in Resources */,
+				5A7C70E2136D719C00037781 /* FranceBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
