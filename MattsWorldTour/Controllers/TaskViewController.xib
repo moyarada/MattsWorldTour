@@ -69,7 +69,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">38</float>
 					</object>
-					<object class="IBUIButton" id="190429298">
+					<object class="IBUIButton" id="367836514">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 95}, {160, 160}}</string>
@@ -98,7 +98,7 @@
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
 					</object>
-					<object class="IBUIButton" id="73327145">
+					<object class="IBUIButton" id="400379655">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{220, 95}, {160, 160}}</string>
@@ -106,6 +106,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUIContentMode">1</int>
+						<int key="IBUITag">1</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -117,7 +118,7 @@
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="683844535"/>
 					</object>
-					<object class="IBUIButton" id="956731924">
+					<object class="IBUIButton" id="514358103">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{420, 95}, {160, 160}}</string>
@@ -125,6 +126,7 @@
 						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUIContentMode">1</int>
+						<int key="IBUITag">2</int>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
@@ -271,7 +273,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">answer1view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="190429298"/>
+						<reference key="destination" ref="367836514"/>
 					</object>
 					<int key="connectionID">32</int>
 				</object>
@@ -279,7 +281,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">answer2view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="73327145"/>
+						<reference key="destination" ref="400379655"/>
 					</object>
 					<int key="connectionID">33</int>
 				</object>
@@ -287,7 +289,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">answer3view</string>
 						<reference key="source" ref="841351856"/>
-						<reference key="destination" ref="956731924"/>
+						<reference key="destination" ref="514358103"/>
 					</object>
 					<int key="connectionID">34</int>
 				</object>
@@ -321,9 +323,9 @@
 							<reference ref="40210"/>
 							<reference ref="151995980"/>
 							<reference ref="314959945"/>
-							<reference ref="190429298"/>
-							<reference ref="73327145"/>
-							<reference ref="956731924"/>
+							<reference ref="367836514"/>
+							<reference ref="400379655"/>
+							<reference ref="514358103"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -349,17 +351,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="190429298"/>
+						<reference key="object" ref="367836514"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
-						<reference key="object" ref="73327145"/>
+						<reference key="object" ref="400379655"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">31</int>
-						<reference key="object" ref="956731924"/>
+						<reference key="object" ref="514358103"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>

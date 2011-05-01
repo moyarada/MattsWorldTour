@@ -13,12 +13,13 @@
 
 @interface TaskViewController : UIViewController
 {
-	
+	int playingSound;
 }
 
 @property (retain) Category *category;
 @property (retain) NSArray *tasks;
 @property (retain) CountryViewController *parent;
+@property (retain) AVAudioPlayer *player;
 
 @property (nonatomic, retain) IBOutlet UIImageView *categoryImageView;
 @property (nonatomic, retain) IBOutlet UILabel *categoryNameLabel;

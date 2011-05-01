@@ -17,7 +17,7 @@
 
 @implementation TaskViewController
 
-@synthesize category, tasks, parent;
+@synthesize category, tasks, parent, player;
 @synthesize categoryImageView, categoryNameLabel, answer1view, answer2view, answer3view;
 
 - (id)initWithCategory:(Category *)nCategory
@@ -28,6 +28,9 @@
 		self.category = nCategory;
 		MattsWorldTourAppDelegate *appDelegate = (MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate];
 		self.tasks = [appDelegate.gameManager answersForCategory:self.category];
+		
+		self.player = nil;
+		playingSound = -1;
     }
     return self;
 }
@@ -59,12 +62,34 @@
 	return [NSString stringWithFormat:@"%@/%@/%@", kGameBundle, self.category.folderName, assetName];
 }
 
-- (void)startPlayingAudio:(UIImageView *)sender
+- (void)startPlayingAudio:(UIButton *)sender
 {
-	NSString *assetPath = [(Task *)[tasks objectAtIndex:sender.tag] filePathForTaskResource];
-	NSURL *url = [NSURL fileURLWithPath:[self fullPathForAsset:assetPath]];
-	AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-	[player play];
+	if (self.player != nil && sender.tag == playingSound)
+	{
+		if ([self.player isPlaying])
+		{
+			[self.player pause];
+			[sender setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		}
+		else
+		{
+			[self.player play];
+			[sender setImage:[UIImage imageNamed:@"Sound_Plause.png"] forState:UIControlStateNormal];
+		}
+	}
+	else
+	{
+		[self.answer1view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer2view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		[self.answer3view setImage:[UIImage imageNamed:@"Sound_Play.png"] forState:UIControlStateNormal];
+		
+		NSString *assetPath = [(Task *)[tasks objectAtIndex:sender.tag] filePathForTaskResource];
+		NSURL *url = [NSURL fileURLWithPath:[self fullPathForAsset:assetPath]];
+		self.player = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] autorelease];
+		[player play];
+		playingSound = sender.tag;
+		[sender setImage:[UIImage imageNamed:@"Sound_Plause.png"] forState:UIControlStateNormal];
+	}
 }
 
 #pragma mark - View lifecycle
