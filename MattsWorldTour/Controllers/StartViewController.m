@@ -44,7 +44,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [NSTimer scheduledTimerWithTimeInterval:6.0 target:self selector:@selector(startAnimations:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(startAnimations:) userInfo:nil repeats:NO];
 }
 
 - (void)startAnimations:(NSTimer *)sender
@@ -57,8 +57,8 @@
     fullRotation.repeatCount = 1e100f;
     [self.rotatingSunImage.layer addAnimation:fullRotation forKey:@"matt"];
     
-    [UIView animateWithDuration:0.450 animations:^(void) {
-        startButton.frame = CGRectMake(409, 495, 206, 68);
+    [UIView animateWithDuration:1.0 animations:^(void) {
+        [startButton setAlpha:1.0];
     }];
 }
 
