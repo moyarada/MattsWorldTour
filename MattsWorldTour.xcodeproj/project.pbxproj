@@ -24,8 +24,6 @@
 		29BE89DD136D7BBE000E0E31 /* Matt-dance-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */; };
 		29BE89DE136D7BBE000E0E31 /* Matt-dance-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */; };
 		29BE89DF136D7BBE000E0E31 /* Matt-dance-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */; };
-		5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A5136D69600020E33F /* Sound_Plause.png */; };
-		5A1408A8136D69600020E33F /* Sound_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A6136D69600020E33F /* Sound_Play.png */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -65,6 +63,8 @@
 		5AAE029A136C9C6000E8079D /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE0298136C9C6000E8079D /* TaskViewController.m */; };
 		5AAE029B136C9C6000E8079D /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE0299136C9C6000E8079D /* TaskViewController.xib */; };
 		5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE02AC136CCECC00E8079D /* Icon-72.png */; };
+		5AC73B43136D80FD00E1C72C /* BtnChoose_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC73B41136D80FD00E1C72C /* BtnChoose_h.png */; };
+		5AC73B44136D80FD00E1C72C /* BtnChoose_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC73B42136D80FD00E1C72C /* BtnChoose_n.png */; };
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
 		5ACACE58136D73A300D91006 /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE57136D73A300D91006 /* Board.png */; };
 		5ACACE5B136D75D200D91006 /* Board-Stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE5A136D75D200D91006 /* Board-Stick.png */; };
@@ -89,8 +89,6 @@
 		29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-06.png"; sourceTree = "<group>"; };
 		29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-07.png"; sourceTree = "<group>"; };
 		29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-dance-08.png"; sourceTree = "<group>"; };
-		5A1408A5136D69600020E33F /* Sound_Plause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Plause.png; sourceTree = "<group>"; };
-		5A1408A6136D69600020E33F /* Sound_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Play.png; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
@@ -146,6 +144,8 @@
 		5AAE0298136C9C6000E8079D /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskViewController.m; path = Controllers/TaskViewController.m; sourceTree = "<group>"; };
 		5AAE0299136C9C6000E8079D /* TaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskViewController.xib; path = Controllers/TaskViewController.xib; sourceTree = "<group>"; };
 		5AAE02AC136CCECC00E8079D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		5AC73B41136D80FD00E1C72C /* BtnChoose_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnChoose_h.png; sourceTree = "<group>"; };
+		5AC73B42136D80FD00E1C72C /* BtnChoose_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnChoose_n.png; sourceTree = "<group>"; };
 		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
 		5ACACE57136D73A300D91006 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
@@ -219,6 +219,8 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5AC73B41136D80FD00E1C72C /* BtnChoose_h.png */,
+				5AC73B42136D80FD00E1C72C /* BtnChoose_n.png */,
 				5ACACE5C136D7BD000D91006 /* bump.caf */,
 				5A9C61FD136D7DEC00C2E9CD /* Sound_Plause.jpg */,
 				5A9C61FB136D7CE200C2E9CD /* Sound_Plause.png */,
@@ -418,6 +420,8 @@
 				29BE89DD136D7BBE000E0E31 /* Matt-dance-06.png in Resources */,
 				29BE89DE136D7BBE000E0E31 /* Matt-dance-07.png in Resources */,
 				29BE89DF136D7BBE000E0E31 /* Matt-dance-08.png in Resources */,
+				5AC73B43136D80FD00E1C72C /* BtnChoose_h.png in Resources */,
+				5AC73B44136D80FD00E1C72C /* BtnChoose_n.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

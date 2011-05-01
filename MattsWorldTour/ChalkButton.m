@@ -11,6 +11,16 @@
 
 @implementation ChalkButton
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self.titleLabel setFont:[UIFont fontWithName:@"Chalkduster" size:30.0]];
+        [self.titleLabel setTextColor:[UIColor whiteColor]];
+    }
+    return self;
+}
+
 + (id)buttonWithFrame:(CGRect)frame
 {
     ChalkButton *btn = (ChalkButton *)[UIButton buttonWithType:UIButtonTypeCustom];
