@@ -16,6 +16,7 @@
 @property (retain) NSArray *categories;
 
 @property (nonatomic, retain) IBOutlet UIView *signView;
+@property (nonatomic, retain) IBOutlet UIView *categoriesListView;
 @property (nonatomic, retain) IBOutlet UIButton *category1Button;
 @property (nonatomic, retain) IBOutlet UIButton *category2Button;
 @property (nonatomic, retain) IBOutlet UIButton *category3Button;

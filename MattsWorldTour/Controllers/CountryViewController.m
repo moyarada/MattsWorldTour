@@ -16,7 +16,7 @@
 @implementation CountryViewController
 
 @synthesize categories;
-@synthesize signView, category1Button, category2Button, category3Button, category4Button;
+@synthesize signView, categoriesListView, category1Button, category2Button, category3Button, category4Button;
 
 - (id)init
 {
@@ -40,8 +40,10 @@
 	[UIView animateWithDuration:0.75 animations:^{
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
 		
+		[self.categoriesListView removeFromSuperview];
+		
 		TaskViewController *taskVC = [[TaskViewController alloc] initWithCategory:[self.categories objectAtIndex:sender.tag]];
-		self.signView = taskVC.view;
+		[self.signView addSubview:taskVC.view];
 		[taskVC release];
 	}];
 }
@@ -87,7 +89,6 @@
 {
 	return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
-
 
 #pragma mark -
 
