@@ -38,6 +38,9 @@
 		5A7C7034136CC33600037781 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C7031136CC33600037781 /* Default.png */; };
 		5A7C703F136CCCCA00037781 /* Start_btn_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C703D136CCCCA00037781 /* Start_btn_h.png */; };
 		5A7C7040136CCCCA00037781 /* Start_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C703E136CCCCA00037781 /* Start_btn_n.png */; };
+		5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C704B136D4E6100037781 /* Chalkduster.ttf */; };
+		5A7C70CE136D507900037781 /* ChalkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C70CD136D507900037781 /* ChalkLabel.m */; };
+		5A7C70D1136D518000037781 /* ChalkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C70D0136D518000037781 /* ChalkButton.m */; };
 		5A9C5780136C8886003FF725 /* Achievements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C577F136C8886003FF725 /* Achievements.plist */; };
 		5A9C5791136C8B1F003FF725 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5790136C8B1F003FF725 /* RootViewController.m */; };
 		5A9C5794136C8B2A003FF725 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C5793136C8B2A003FF725 /* CountryViewController.m */; };
@@ -88,6 +91,11 @@
 		5A7C7031136CC33600037781 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5A7C703D136CCCCA00037781 /* Start_btn_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_btn_h.png; sourceTree = "<group>"; };
 		5A7C703E136CCCCA00037781 /* Start_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_btn_n.png; sourceTree = "<group>"; };
+		5A7C704B136D4E6100037781 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
+		5A7C70CC136D507900037781 /* ChalkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChalkLabel.h; sourceTree = "<group>"; };
+		5A7C70CD136D507900037781 /* ChalkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChalkLabel.m; sourceTree = "<group>"; };
+		5A7C70CF136D518000037781 /* ChalkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChalkButton.h; sourceTree = "<group>"; };
+		5A7C70D0136D518000037781 /* ChalkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChalkButton.m; sourceTree = "<group>"; };
 		5A9C577F136C8886003FF725 /* Achievements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Achievements.plist; sourceTree = "<group>"; };
 		5A9C578F136C8B1F003FF725 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5A9C5790136C8B1F003FF725 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -165,6 +173,7 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5A7C704B136D4E6100037781 /* Chalkduster.ttf */,
 				5A7C703D136CCCCA00037781 /* Start_btn_h.png */,
 				5A7C703E136CCCCA00037781 /* Start_btn_n.png */,
 				5A7C702F136CC33600037781 /* Background.png */,
@@ -220,6 +229,7 @@
 				5A1D362F136B71C300AB0277 /* Models */,
 				5A695CB7136B5D03008089AD /* MattsWorldTourAppDelegate.h */,
 				5A695CB8136B5D03008089AD /* MattsWorldTourAppDelegate.m */,
+				5A7C70CB136D503000037781 /* Utilities */,
 				5A677704136C51B000AA1A49 /* Resources */,
 				5A695CAF136B5D03008089AD /* Supporting Files */,
 			);
@@ -237,6 +247,17 @@
 				5A9C577F136C8886003FF725 /* Achievements.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A7C70CB136D503000037781 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5A7C70CC136D507900037781 /* ChalkLabel.h */,
+				5A7C70CD136D507900037781 /* ChalkLabel.m */,
+				5A7C70CF136D518000037781 /* ChalkButton.h */,
+				5A7C70D0136D518000037781 /* ChalkButton.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +333,7 @@
 				29BE89A9136CC544000E0E31 /* Matt-landing-02.png in Resources */,
 				29BE89AA136CC544000E0E31 /* Matt-landing-03.png in Resources */,
 				29BE89AB136CC544000E0E31 /* Matt-landing-04.png in Resources */,
+				5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +355,8 @@
 				5A9C5794136C8B2A003FF725 /* CountryViewController.m in Sources */,
 				5A7C7026136CB81C00037781 /* StartViewController.m in Sources */,
 				5AAE029A136C9C6000E8079D /* TaskViewController.m in Sources */,
+				5A7C70CE136D507900037781 /* ChalkLabel.m in Sources */,
+				5A7C70D1136D518000037781 /* ChalkButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
