@@ -10,10 +10,11 @@
 
 #import "MattsWorldTourAppDelegate.h"
 #import "Category.h"
+#import "Task.h"
 
 @implementation TaskViewController
 
-@synthesize category, tasks;
+@synthesize category, tasks, parent;
 @synthesize categoryImageView, categoryNameLabel, answer1view, answer2view, answer3view;
 
 - (id)initWithCategory:(Category *)nCategory
@@ -30,7 +31,7 @@
 
 - (IBAction)chooseAnswer:(UIButton *)sender
 {
-	
+	[self.parent flipSignToCategoriesList];
 }
 
 - (void)dealloc
@@ -65,6 +66,10 @@
 	self.categoryImageView.backgroundColor = imageColor;
 	
 	self.categoryNameLabel.text = self.category.name;
+	
+	NSLog(@"Task 1: %@", [(Task *)[self.tasks objectAtIndex:0] filePathForTaskResource]);
+	NSLog(@"Task 2: %@", [(Task *)[self.tasks objectAtIndex:1] filePathForTaskResource]);
+	NSLog(@"Task 3: %@", [(Task *)[self.tasks objectAtIndex:2] filePathForTaskResource]);
 	
 	if (self.category.type == CategoryTypeFood || self.category.type == CategoryTypeFlag)
 	{

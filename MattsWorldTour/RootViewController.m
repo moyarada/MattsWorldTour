@@ -7,7 +7,10 @@
 //
 
 #import "RootViewController.h"
+
+#import "MattsWorldTourAppDelegate.h"
 #import "CountryViewController.h"
+#import "GameManager.h"
 
 @implementation RootViewController
 
@@ -99,15 +102,20 @@
 		
 		// Transform to the country view (showing the question and stuff).
 		
-		[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
-		[UIView setAnimationDuration:0.75];
-		[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+//		[UIView beginAnimations:@"CurlUpMapAndGoToCountry" context:NULL];
+//		[UIView setAnimationDuration:0.75];
 		
-		CountryViewController *countryVC = [[CountryViewController alloc] init];
-		[self.navigationController pushViewController:countryVC animated:NO];
-		[countryVC release];
+		[((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager rectForCountryAtPoint:CGPointMake(0, 0)];
+		
+		[UIView animateWithDuration:0.75 animations:^{
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
+			
+			CountryViewController *countryVC = [[CountryViewController alloc] init];
+			[self.navigationController pushViewController:countryVC animated:NO];
+			[countryVC release];
+		}];
 		 
-		[UIView commitAnimations];
+//		[UIView commitAnimations];
 	}
 }
 

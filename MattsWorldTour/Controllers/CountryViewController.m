@@ -15,7 +15,7 @@
 
 @implementation CountryViewController
 
-@synthesize categories;
+@synthesize categories, taskVC;
 @synthesize signView, categoriesListView, category1Button, category2Button, category3Button, category4Button;
 
 - (id)init
@@ -37,14 +37,32 @@
 
 - (IBAction)chooseCategory:(UIButton *)sender
 {
+	Category *chosenCategory = [self.categories objectAtIndex:sender.tag];
+	[self flipSignToTasksForCategory:chosenCategory];
+}
+
+- (void)flipSignToTasksForCategory:(Category *)category
+{
+	self.taskVC = [[[TaskViewController alloc] initWithCategory:category] autorelease];
+	self.taskVC.parent = self;
+	
 	[UIView animateWithDuration:0.75 animations:^{
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
 		
 		[self.categoriesListView removeFromSuperview];
-		
-		TaskViewController *taskVC = [[TaskViewController alloc] initWithCategory:[self.categories objectAtIndex:sender.tag]];
 		[self.signView addSubview:taskVC.view];
-		[taskVC release];
+	}];
+}
+
+- (void)flipSignToCategoriesList
+{
+	self.taskVC = nil;
+	
+	[UIView animateWithDuration:0.75 animations:^{
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
+		
+		[[[self.signView subviews] objectAtIndex:0] removeFromSuperview];
+		[self.signView addSubview:self.categoriesListView];
 	}];
 }
 

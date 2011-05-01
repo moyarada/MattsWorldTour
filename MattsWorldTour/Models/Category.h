@@ -22,6 +22,7 @@ CategoryType;
 @interface Category : NSObject
 
 @property (readonly) NSString *name;
+@property (readonly) NSString *folderName;
 @property (assign) CategoryType type;
 
 + (Category *)categoryWithType:(NSString *)nTypeString;

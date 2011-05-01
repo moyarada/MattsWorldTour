@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CountryViewController.h"
 #import "Category.h"
 
 @interface TaskViewController : UIViewController
@@ -17,6 +18,7 @@
 
 @property (retain) Category *category;
 @property (retain) NSArray *tasks;
+@property (retain) CountryViewController *parent;
 
 @property (nonatomic, retain) IBOutlet UIImageView *categoryImageView;
 @property (nonatomic, retain) IBOutlet UILabel *categoryNameLabel;

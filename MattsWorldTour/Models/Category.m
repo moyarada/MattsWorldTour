@@ -48,21 +48,33 @@
 	{
 		name = @"Spoken words";
 	}
-	else if (self.type == CategoryTypeWrittenText)
-	{
-		name = @"Written text";
-	}
-	else if (self.type == CategoryTypeLandmark)
-	{
-		name = @"Famous landmark";
-	}
-	else if (self.type == CategoryTypeCapitalName)
-	{
-		name = @"Capital name";
-	}
 	else if (self.type == CategoryTypeFood)
 	{
 		name = @"Food";
+	}
+	
+	return name;
+}
+
+- (NSString *)folderName
+{
+	NSString *name = nil;
+	
+	if (self.type == CategoryTypeFlag)
+	{
+		name = @"flag";
+	}
+	else if (self.type == CategoryTypeAnthem)
+	{
+		name = @"anthem";
+	}
+	else if (self.type == CategoryTypeWordsSpoken)
+	{
+		name = @"speech";
+	}
+	else if (self.type == CategoryTypeFood)
+	{
+		name = @"food";
 	}
 	
 	return name;
@@ -82,18 +94,6 @@
 	else if ([typeString isEqualToString:@"WordsSpoken"])
 	{
 		type = CategoryTypeWordsSpoken;
-	}
-	else if ([typeString isEqualToString:@"WrittenText"])
-	{
-		type = CategoryTypeWrittenText;
-	}
-	else if ([typeString isEqualToString:@"Landmark"])
-	{
-		type = CategoryTypeLandmark;
-	}
-	else if ([typeString isEqualToString:@"CapitalName"])
-	{
-		type = CategoryTypeCapitalName;
 	}
 	else
 	{
