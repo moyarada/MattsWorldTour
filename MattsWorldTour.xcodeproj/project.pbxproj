@@ -68,6 +68,7 @@
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
 		5ACACE58136D73A300D91006 /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE57136D73A300D91006 /* Board.png */; };
 		5ACACE5B136D75D200D91006 /* Board-Stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE5A136D75D200D91006 /* Board-Stick.png */; };
+		5ACACE5D136D7BD000D91006 /* bump.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE5C136D7BD000D91006 /* bump.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +150,7 @@
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
 		5ACACE57136D73A300D91006 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
 		5ACACE5A136D75D200D91006 /* Board-Stick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Board-Stick.png"; sourceTree = "<group>"; };
+		5ACACE5C136D7BD000D91006 /* bump.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bump.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ACACE5C136D7BD000D91006 /* bump.caf */,
 				5A9C61FD136D7DEC00C2E9CD /* Sound_Plause.jpg */,
 				5A9C61FB136D7CE200C2E9CD /* Sound_Plause.png */,
 				5A9C61FC136D7CE200C2E9CD /* Sound_Play.png */,
@@ -405,6 +408,7 @@
 				5A7C70E2136D719C00037781 /* FranceBackground.png in Resources */,
 				5ACACE58136D73A300D91006 /* Board.png in Resources */,
 				5ACACE5B136D75D200D91006 /* Board-Stick.png in Resources */,
+				5ACACE5D136D7BD000D91006 /* bump.caf in Resources */,
 				5A9C61FE136D7DEC00C2E9CD /* Sound_Plause.jpg in Resources */,
 				29BE89D8136D7BBE000E0E31 /* Matt-dance-01.png in Resources */,
 				29BE89D9136D7BBE000E0E31 /* Matt-dance-02.png in Resources */,
