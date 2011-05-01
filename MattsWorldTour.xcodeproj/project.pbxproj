@@ -222,6 +222,14 @@
 				29BE89A4136CC544000E0E31 /* Matt-landing-02.png */,
 				29BE89A5136CC544000E0E31 /* Matt-landing-03.png */,
 				29BE89A6136CC544000E0E31 /* Matt-landing-04.png */,
+				29BE89D0136D7BBE000E0E31 /* Matt-dance-01.png */,
+				29BE89D1136D7BBE000E0E31 /* Matt-dance-02.png */,
+				29BE89D2136D7BBE000E0E31 /* Matt-dance-03.png */,
+				29BE89D3136D7BBE000E0E31 /* Matt-dance-04.png */,
+				29BE89D4136D7BBE000E0E31 /* Matt-dance-05.png */,
+				29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */,
+				29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */,
+				29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */,
 				5A677705136C51B000AA1A49 /* game.bundle */,
 			);
 			path = Resources;
