@@ -97,7 +97,9 @@
 	
 	[UIView beginAnimations:@"MattFalling" context:NULL];
 	[UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
-	[UIView setAnimationDuration:0.4];
+	[UIView setAnimationDuration:0.3];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDidStopSelector:@selector (didDropMatt:finished:context:)];
 	
 	// Calculate the new frame.
 	CGRect frame = [mattView_ frame];
@@ -106,6 +108,15 @@
 	
 	[UIView commitAnimations];
 
+}
+
+- (void)didDropMatt:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+	// Matt was dropped, animate the landing.
+	[mattView_ setImage:[UIImage imageNamed:@"Matt-landing-04.png"]];
+	[mattView_ setAnimationImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"Matt-landing-01.png"], [UIImage imageNamed:@"Matt-landing-02.png"], [UIImage imageNamed:@"Matt-landing-03.png"], [UIImage imageNamed:@"Matt-landing-04.png"], nil]];
+	[mattView_ setAnimationDuration:0.2];
+	[mattView_ setAnimationRepeatCount:1];
+	[mattView_ startAnimating];
 }
 
 @end
