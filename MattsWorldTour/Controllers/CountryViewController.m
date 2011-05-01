@@ -15,6 +15,12 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 
+
+@interface CountryViewController ()
+- (void)slapSignMatt;
+@end
+
+
 @implementation CountryViewController
 
 @synthesize categories, taskVC;
@@ -50,25 +56,28 @@
 	self.taskVC = [[[TaskViewController alloc] initWithCategory:category] autorelease];
 	self.taskVC.parent = self;
 	
+	[self slapSignMatt];
 	[UIView animateWithDuration:0.75 animations:^{
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
 		
 		[self.categoriesListView removeFromSuperview];
 		[self.signView addSubview:taskVC.view];
 	}];
+	
 }
 
 - (void)flipSignToCategoriesList
 {
 	self.taskVC = nil;
 	
+	[self slapSignMatt];
 	[UIView animateWithDuration:0.75 animations:^{
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
 		
 		[[[self.signView subviews] objectAtIndex:0] removeFromSuperview];
 		[self.signView addSubview:self.categoriesListView];
 	}];
-	
+		
 	GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
 	NSLog(@"CompletedTasks: %@", gm.tasks);
 }
@@ -92,10 +101,10 @@
 	[[self view] addSubview:mattView_];
 	
 	// Add temporary dance button.
-	UIButton *danceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[danceButton setFrame:CGRectMake (920, 700, 80, 44)];
-	[danceButton addTarget:self action:@selector (danceMatt) forControlEvents:UIControlEventTouchUpInside];
-	[[self view] addSubview:danceButton];
+//	UIButton *danceButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[danceButton setFrame:CGRectMake (920, 700, 80, 44)];
+//	[danceButton addTarget:self action:@selector (slapSignMatt) forControlEvents:UIControlEventTouchUpInside];
+//	[[self view] addSubview:danceButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -166,6 +175,14 @@
 	[mattView_ setAnimationRepeatCount:1];
 	[mattView_ startAnimating];
 	
+}
+
+- (void)slapSignMatt {
+	// Make Matt slap sign
+	[mattView_ setAnimationImages:[NSArray arrayWithObjects:[UIImage imageNamed:@"Matt-slap-01.png"], [UIImage imageNamed:@"Matt-slap-02.png"], [UIImage imageNamed:@"Matt-slap-03.png"], [UIImage imageNamed:@"Matt-slap-04.png"], nil]];
+	[mattView_ setAnimationDuration:0.5];
+	[mattView_ setAnimationRepeatCount:1];
+	[mattView_ startAnimating];
 }
 
 @end
