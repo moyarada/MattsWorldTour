@@ -57,6 +57,8 @@
 		5AAE029B136C9C6000E8079D /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE0299136C9C6000E8079D /* TaskViewController.xib */; };
 		5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE02AC136CCECC00E8079D /* Icon-72.png */; };
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
+		5ACACE58136D73A300D91006 /* Board.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE57136D73A300D91006 /* Board.png */; };
+		5ACACE5B136D75D200D91006 /* Board-Stick.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACACE5A136D75D200D91006 /* Board-Stick.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,8 @@
 		5AAE02AC136CCECC00E8079D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
+		5ACACE57136D73A300D91006 /* Board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board.png; sourceTree = "<group>"; };
+		5ACACE5A136D75D200D91006 /* Board-Stick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Board-Stick.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		5A677704136C51B000AA1A49 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5ACACE57136D73A300D91006 /* Board.png */,
+				5ACACE5A136D75D200D91006 /* Board-Stick.png */,
 				5A7C70E1136D719C00037781 /* FranceBackground.png */,
 				5A7C70DD136D6F2800037781 /* Map-Europe-Matt.png */,
 				5A7C70DE136D6F2800037781 /* Map-World-Matt.png */,
@@ -370,6 +376,8 @@
 				5A7C70DF136D6F2800037781 /* Map-Europe-Matt.png in Resources */,
 				5A7C70E0136D6F2800037781 /* Map-World-Matt.png in Resources */,
 				5A7C70E2136D719C00037781 /* FranceBackground.png in Resources */,
+				5ACACE58136D73A300D91006 /* Board.png in Resources */,
+				5ACACE5B136D75D200D91006 /* Board-Stick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
