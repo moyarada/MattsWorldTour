@@ -16,6 +16,8 @@
 		29BE89A9136CC544000E0E31 /* Matt-landing-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A4136CC544000E0E31 /* Matt-landing-02.png */; };
 		29BE89AA136CC544000E0E31 /* Matt-landing-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A5136CC544000E0E31 /* Matt-landing-03.png */; };
 		29BE89AB136CC544000E0E31 /* Matt-landing-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 29BE89A6136CC544000E0E31 /* Matt-landing-04.png */; };
+		5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A5136D69600020E33F /* Sound_Plause.png */; };
+		5A1408A8136D69600020E33F /* Sound_Play.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1408A6136D69600020E33F /* Sound_Play.png */; };
 		5A1D3635136B724800AB0277 /* Achievement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3634136B724800AB0277 /* Achievement.m */; };
 		5A1D3638136B74DB00AB0277 /* GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D3637136B74DB00AB0277 /* GameManager.m */; };
 		5A1D363B136B75EA00AB0277 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D363A136B75EA00AB0277 /* Category.m */; };
@@ -35,7 +37,6 @@
 		5A7C702E136CBF9300037781 /* SpinningCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C702D136CBF9300037781 /* SpinningCircle.png */; };
 		5A7C7032136CC33600037781 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C702F136CC33600037781 /* Background.png */; };
 		5A7C7033136CC33600037781 /* BackgroundOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C7030136CC33600037781 /* BackgroundOverlay.png */; };
-		5A7C7034136CC33600037781 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C7031136CC33600037781 /* Default.png */; };
 		5A7C703F136CCCCA00037781 /* Start_btn_h.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C703D136CCCCA00037781 /* Start_btn_h.png */; };
 		5A7C7040136CCCCA00037781 /* Start_btn_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C703E136CCCCA00037781 /* Start_btn_n.png */; };
 		5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7C704B136D4E6100037781 /* Chalkduster.ttf */; };
@@ -54,6 +55,7 @@
 		5A9C5796136C8B36003FF725 /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C5795136C8B36003FF725 /* CountryViewController.xib */; };
 		5AAE029A136C9C6000E8079D /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE0298136C9C6000E8079D /* TaskViewController.m */; };
 		5AAE029B136C9C6000E8079D /* TaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE0299136C9C6000E8079D /* TaskViewController.xib */; };
+		5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE02AC136CCECC00E8079D /* Icon-72.png */; };
 		5AC91080136B7D37000F9FB3 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9107F136B7D37000F9FB3 /* Task.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		29BE89A4136CC544000E0E31 /* Matt-landing-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-02.png"; sourceTree = "<group>"; };
 		29BE89A5136CC544000E0E31 /* Matt-landing-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-03.png"; sourceTree = "<group>"; };
 		29BE89A6136CC544000E0E31 /* Matt-landing-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Matt-landing-04.png"; sourceTree = "<group>"; };
+		5A1408A5136D69600020E33F /* Sound_Plause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Plause.png; sourceTree = "<group>"; };
+		5A1408A6136D69600020E33F /* Sound_Play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sound_Play.png; sourceTree = "<group>"; };
 		5A1D3633136B724800AB0277 /* Achievement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Achievement.h; path = Models/Achievement.h; sourceTree = "<group>"; };
 		5A1D3634136B724800AB0277 /* Achievement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Achievement.m; path = Models/Achievement.m; sourceTree = "<group>"; };
 		5A1D3636136B74DB00AB0277 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = Models/GameManager.h; sourceTree = "<group>"; };
@@ -95,7 +99,6 @@
 		5A7C702D136CBF9300037781 /* SpinningCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpinningCircle.png; sourceTree = "<group>"; };
 		5A7C702F136CC33600037781 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		5A7C7030136CC33600037781 /* BackgroundOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackgroundOverlay.png; sourceTree = "<group>"; };
-		5A7C7031136CC33600037781 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5A7C703D136CCCCA00037781 /* Start_btn_h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_btn_h.png; sourceTree = "<group>"; };
 		5A7C703E136CCCCA00037781 /* Start_btn_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start_btn_n.png; sourceTree = "<group>"; };
 		5A7C704B136D4E6100037781 /* Chalkduster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chalkduster.ttf; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		5AAE0297136C9C6000E8079D /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskViewController.h; path = Controllers/TaskViewController.h; sourceTree = "<group>"; };
 		5AAE0298136C9C6000E8079D /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskViewController.m; path = Controllers/TaskViewController.m; sourceTree = "<group>"; };
 		5AAE0299136C9C6000E8079D /* TaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskViewController.xib; path = Controllers/TaskViewController.xib; sourceTree = "<group>"; };
+		5AAE02AC136CCECC00E8079D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		5AC9107E136B7D37000F9FB3 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Models/Task.h; sourceTree = "<group>"; };
 		5AC9107F136B7D37000F9FB3 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Models/Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,12 +198,14 @@
 				5A7C70DE136D6F2800037781 /* Map-World-Matt.png */,
 				5A7C70DB136D6E4200037781 /* MapHead.png */,
 				5A7C70D7136D68FE00037781 /* scream.caf */,
+				5A1408A5136D69600020E33F /* Sound_Plause.png */,
+				5A1408A6136D69600020E33F /* Sound_Play.png */,
+				5AAE02AC136CCECC00E8079D /* Icon-72.png */,
 				5A7C704B136D4E6100037781 /* Chalkduster.ttf */,
 				5A7C703D136CCCCA00037781 /* Start_btn_h.png */,
 				5A7C703E136CCCCA00037781 /* Start_btn_n.png */,
 				5A7C702F136CC33600037781 /* Background.png */,
 				5A7C7030136CC33600037781 /* BackgroundOverlay.png */,
-				5A7C7031136CC33600037781 /* Default.png */,
 				5A7C702D136CBF9300037781 /* SpinningCircle.png */,
 				29BE899E136CB174000E0E31 /* Map-World.png */,
 				2934E40B136C8B1D0099A9B2 /* Map-Europe.png */,
@@ -347,7 +353,6 @@
 				5A7C702E136CBF9300037781 /* SpinningCircle.png in Resources */,
 				5A7C7032136CC33600037781 /* Background.png in Resources */,
 				5A7C7033136CC33600037781 /* BackgroundOverlay.png in Resources */,
-				5A7C7034136CC33600037781 /* Default.png in Resources */,
 				29BE89A1136CB6BF000E0E31 /* Map-France.png in Resources */,
 				5A7C703F136CCCCA00037781 /* Start_btn_h.png in Resources */,
 				5A7C7040136CCCCA00037781 /* Start_btn_n.png in Resources */,
@@ -356,6 +361,9 @@
 				29BE89A9136CC544000E0E31 /* Matt-landing-02.png in Resources */,
 				29BE89AA136CC544000E0E31 /* Matt-landing-03.png in Resources */,
 				29BE89AB136CC544000E0E31 /* Matt-landing-04.png in Resources */,
+				5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */,
+				5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */,
+				5A1408A8136D69600020E33F /* Sound_Play.png in Resources */,
 				5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */,
 				5A7C70D8136D68FE00037781 /* scream.caf in Resources */,
 				5A7C70DC136D6E4200037781 /* MapHead.png in Resources */,

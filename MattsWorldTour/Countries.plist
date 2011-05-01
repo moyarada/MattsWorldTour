@@ -8,9 +8,7 @@
 			<string>Flag</string>
 			<string>Anthem</string>
 			<string>WordsSpoken</string>
-			<string>WrittenText</string>
-			<string>Landmark</string>
-			<string>CapitalName</string>
+			<string>Food</string>
 		</array>
 		<key>countryCode</key>
 		<string>FR</string>
@@ -23,9 +21,7 @@
 			<string>Flag</string>
 			<string>Anthem</string>
 			<string>WordsSpoken</string>
-			<string>WrittenText</string>
-			<string>Landmark</string>
-			<string>CapitalName</string>
+			<string>Food</string>
 		</array>
 		<key>countryCode</key>
 		<string>ES</string>
@@ -38,9 +34,7 @@
 			<string>Flag</string>
 			<string>Anthem</string>
 			<string>WordsSpoken</string>
-			<string>WrittenText</string>
-			<string>Landmark</string>
-			<string>CapitalName</string>
+			<string>Food</string>
 		</array>
 		<key>countryCode</key>
 		<string>PT</string>

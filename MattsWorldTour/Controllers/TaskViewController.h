@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CountryViewController.h"
 #import "Category.h"
 
 @interface TaskViewController : UIViewController
@@ -17,15 +18,18 @@
 
 @property (retain) Category *category;
 @property (retain) NSArray *tasks;
+@property (retain) CountryViewController *parent;
 
 @property (nonatomic, retain) IBOutlet UIImageView *categoryImageView;
 @property (nonatomic, retain) IBOutlet UILabel *categoryNameLabel;
-@property (nonatomic, retain) IBOutlet UIView *answer1view;
-@property (nonatomic, retain) IBOutlet UIView *answer2view;
-@property (nonatomic, retain) IBOutlet UIView *answer3view;
+@property (nonatomic, retain) IBOutlet UIImageView *answer1view;
+@property (nonatomic, retain) IBOutlet UIImageView *answer2view;
+@property (nonatomic, retain) IBOutlet UIImageView *answer3view;
 
 - (id)initWithCategory:(Category *)nCategory;
 
 - (IBAction)chooseAnswer:(UIButton *)sender;
+
+- (NSString *)fullPathForImage:(NSString *)imageName;
 
 @end

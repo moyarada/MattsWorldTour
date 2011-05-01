@@ -17,8 +17,8 @@
 
 @implementation CountryViewController
 
-@synthesize categories;
-@synthesize signView, category1Button, category2Button, category3Button, category4Button;
+@synthesize categories, taskVC;
+@synthesize signView, categoriesListView, category1Button, category2Button, category3Button, category4Button;
 
 - (id)init
 {
@@ -27,6 +27,8 @@
 	{
 		GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
 		self.categories = [gm categoriesForSelectedCountry];
+		
+		NSLog(@"CompletedTasks: %@", gm.tasks);
     }
     return self;
 }
@@ -39,13 +41,36 @@
 
 - (IBAction)chooseCategory:(UIButton *)sender
 {
+	Category *chosenCategory = [self.categories objectAtIndex:sender.tag];
+	[self flipSignToTasksForCategory:chosenCategory];
+}
+
+- (void)flipSignToTasksForCategory:(Category *)category
+{
+	self.taskVC = [[[TaskViewController alloc] initWithCategory:category] autorelease];
+	self.taskVC.parent = self;
+	
 	[UIView animateWithDuration:0.75 animations:^{
 		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
 		
-		TaskViewController *taskVC = [[TaskViewController alloc] initWithCategory:[self.categories objectAtIndex:sender.tag]];
-		self.signView = taskVC.view;
-		[taskVC release];
+		[self.categoriesListView removeFromSuperview];
+		[self.signView addSubview:taskVC.view];
 	}];
+}
+
+- (void)flipSignToCategoriesList
+{
+	self.taskVC = nil;
+	
+	[UIView animateWithDuration:0.75 animations:^{
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.signView cache:YES];
+		
+		[[[self.signView subviews] objectAtIndex:0] removeFromSuperview];
+		[self.signView addSubview:self.categoriesListView];
+	}];
+	
+	GameManager *gm = ((MattsWorldTourAppDelegate *)[[UIApplication sharedApplication] delegate]).gameManager;
+	NSLog(@"CompletedTasks: %@", gm.tasks);
 }
 
 #pragma mark - View lifecycle
@@ -88,7 +113,6 @@
 {
 	return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) || (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
-
 
 #pragma mark -
 

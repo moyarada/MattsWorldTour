@@ -44,7 +44,7 @@
 
 - (NSString *)filePathForTaskResource
 {
-    NSString *categoryPath = [NSString stringWithFormat:@"%@/%@", kGameBundle, [_category.name lowercaseString]];
+    NSString *categoryPath = [NSString stringWithFormat:@"%@/%@", kGameBundle, _category.folderName];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:categoryPath]) {
         NSArray *contents = [fileManager contentsOfDirectoryAtPath:categoryPath error:nil];

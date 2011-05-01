@@ -21,6 +21,8 @@
 	self = [super init];
 	if (self)
 	{
+		self.tasks = [NSMutableArray array];
+		
 		NSArray *countriesTemp = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Countries" ofType:@"plist"]];
 		NSMutableArray *countriesArray = [[NSMutableArray alloc] init];
 		[countriesTemp enumerateObjectsUsingBlock:^(NSDictionary *countryInfo, NSUInteger index, BOOL *stop) {
