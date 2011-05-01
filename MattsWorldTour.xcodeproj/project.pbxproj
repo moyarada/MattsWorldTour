@@ -180,6 +180,7 @@
 				5A1408A5136D69600020E33F /* Sound_Plause.png */,
 				5A1408A6136D69600020E33F /* Sound_Play.png */,
 				5AAE02AC136CCECC00E8079D /* Icon-72.png */,
+				5A7C704B136D4E6100037781 /* Chalkduster.ttf */,
 				5A7C703D136CCCCA00037781 /* Start_btn_h.png */,
 				5A7C703E136CCCCA00037781 /* Start_btn_n.png */,
 				5A7C702F136CC33600037781 /* Background.png */,
@@ -340,6 +341,7 @@
 				5AAE02AD136CCECC00E8079D /* Icon-72.png in Resources */,
 				5A1408A7136D69600020E33F /* Sound_Plause.png in Resources */,
 				5A1408A8136D69600020E33F /* Sound_Play.png in Resources */,
+				5A7C704C136D4E6100037781 /* Chalkduster.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
