@@ -249,6 +249,10 @@
 				29BE89D5136D7BBE000E0E31 /* Matt-dance-06.png */,
 				29BE89D6136D7BBE000E0E31 /* Matt-dance-07.png */,
 				29BE89D7136D7BBE000E0E31 /* Matt-dance-08.png */,
+				29BE89E1136D7F0E000E0E31 /* Matt-slap-01.png */,
+				29BE89E2136D7F0F000E0E31 /* Matt-slap-02.png */,
+				29BE89E3136D7F0F000E0E31 /* Matt-slap-03.png */,
+				29BE89E4136D7F10000E0E31 /* Matt-slap-04.png */,
 				5A677705136C51B000AA1A49 /* game.bundle */,
 			);
 			path = Resources;
@@ -414,6 +418,10 @@
 				29BE89DD136D7BBE000E0E31 /* Matt-dance-06.png in Resources */,
 				29BE89DE136D7BBE000E0E31 /* Matt-dance-07.png in Resources */,
 				29BE89DF136D7BBE000E0E31 /* Matt-dance-08.png in Resources */,
+				29BE89E5136D7F11000E0E31 /* Matt-slap-01.png in Resources */,
+				29BE89E6136D7F11000E0E31 /* Matt-slap-02.png in Resources */,
+				29BE89E7136D7F11000E0E31 /* Matt-slap-03.png in Resources */,
+				29BE89E8136D7F11000E0E31 /* Matt-slap-04.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
